@@ -1,4 +1,4 @@
-import { FC, ReactNode, SVGProps } from 'react';
+import { FC, SVGProps } from 'react';
 
 export interface Post {
   username: string;
@@ -17,4 +17,11 @@ export interface Category {
   title: string;
   description: string;
   Icon: FC<SVGProps<SVGSVGElement>>;
+}
+
+export interface Author {
+  fullName: string;
+  occupation: string;
+  company: string;
+  urlToAvatar: string;
 }

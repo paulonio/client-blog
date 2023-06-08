@@ -3,16 +3,12 @@ import React from 'react';
 import Button from '@/components/Button';
 import Navigation from '@/components/Navigation';
 
-import FacebookIcon from '@/icons/FacebookIcon';
-import TwitterIcon from '@/icons/TwitterIcon';
-import InstagramIcon from '@/icons/InstagramIcon';
-import LinkledinIcon from '@/icons/LinkedinIcon';
-
 import { FOOTER_ROUTES } from '@/constants/routes';
 
 import { inter } from '@/styles/fonts';
 
 import styles from './styled.module.scss';
+import Socials from '../Socials';
 
 const Footer = () => {
   return (
@@ -40,20 +36,7 @@ const Footer = () => {
             <p className={styles.contact__info}>Finstreet 118 2561 Fintown</p>
             <p className={styles.contact__info}>Hello@finsweet.com 020 7993 2905</p>
           </div>
-          <ul className={styles.contact__socials}>
-            <li>
-              <FacebookIcon className={styles.icon} />
-            </li>
-            <li>
-              <TwitterIcon className={styles.icon} />
-            </li>
-            <li>
-              <InstagramIcon className={styles.icon} />
-            </li>
-            <li>
-              <LinkledinIcon className={styles.icon} />
-            </li>
-          </ul>
+          <Socials theme="light" />
         </div>
       </div>
     </footer>

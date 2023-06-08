@@ -1,0 +1,43 @@
+@import '../../styles/sass/constants';
+
+.authors {
+  margin-top: 128px;
+
+  & h2 {
+    text-align: center;
+  }
+
+  &__content {
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+}
+
+.author {
+  width: 24%;
+  padding: 40px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-light-l;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: $color-light-s;
+    cursor: pointer;
+  }
+
+  &__image {
+    margin-bottom: 20px;
+
+    & img {
+      border-radius: 50%;
+    }
+  }
+
+  & ul {
+    margin-top: 20px;
+  }
+}
