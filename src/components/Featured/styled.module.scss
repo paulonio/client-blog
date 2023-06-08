@@ -1,0 +1,80 @@
+@import '../../styles/sass/constants';
+
+.featured {
+  margin-top: 128px;
+  display: flex;
+  justify-content: space-between;
+
+  &__post {
+    border: solid 1px rgba($color-dark-s, 0.1);
+  }
+}
+
+.post {
+  &__wrapper {
+    max-width: 733px;
+    width: 100%;
+    margin-top: 32px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 32px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  &__container {
+    padding: 32px 32px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 8px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $color-light-s;
+      cursor: pointer;
+    }
+  }
+}
+
+.posts {
+  max-width: 517px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.link__button {
+  border: none;
+  background-color: transparent;
+  color: $color-secondary;
+  transition: color 0.3s;
+  &:hover {
+    color: rgba($color-secondary, 0.8);
+    cursor: pointer;
+  }
+}
+
+.image {
+  & img {
+    width: 100%;
+  }
+}
+
+.name {
+  color: $color-secondary;
+}

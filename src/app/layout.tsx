@@ -1,12 +1,11 @@
 import React from 'react';
-import { Sen } from 'next/font/google';
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-import './globals.css';
+import { inter } from '@/styles/fonts';
 
-const sen = Sen({ weight: ['400', '700'], subsets: ['latin'] });
+import './globals.scss';
 
 export const metadata = {
   title: 'Create Next App',
@@ -16,9 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={sen.className}>
+      <body className={inter.className}>
         <Header />
-        <main className="container">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

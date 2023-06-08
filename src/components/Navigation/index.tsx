@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
 import Link from 'next/link';
 
-import { Inter } from 'next/font/google';
+import { inter } from '@/styles/fonts';
+
 import styles from './styled.module.scss';
 
 interface LinkType {
@@ -12,8 +13,6 @@ interface LinkType {
 interface NavigationProps {
   links: LinkType[];
 }
-
-const inter = Inter({ weight: ['400'], subsets: ['latin'] });
 
 const Navigation: FC<NavigationProps> = ({ links }) => {
   return (

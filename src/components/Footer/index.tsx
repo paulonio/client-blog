@@ -1,7 +1,7 @@
 import React from 'react';
-import { Inter } from 'next/font/google';
 
 import Button from '@/components/Button';
+import Navigation from '@/components/Navigation';
 
 import FacebookIcon from '@/icons/FacebookIcon';
 import TwitterIcon from '@/icons/TwitterIcon';
@@ -10,10 +10,9 @@ import LinkledinIcon from '@/icons/LinkedinIcon';
 
 import { FOOTER_ROUTES } from '@/constants/routes';
 
-import styles from './styled.module.scss';
-import Navigation from '@/components/Navigation';
+import { inter } from '@/styles/fonts';
 
-const inter = Inter({ weight: ['400'], subsets: ['latin'] });
+import styles from './styled.module.scss';
 
 const Footer = () => {
   return (

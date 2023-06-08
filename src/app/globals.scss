@@ -1,0 +1,76 @@
+@import '../styles/sass/constants';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 64px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  color: $color-white;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  color: $color-black;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: $color-black;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: $color-black;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 700;
+  color: $color-black;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.body-s {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: $color-dark-s;
+}
+
+.body-l {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: $color-dark-l;
+}

@@ -1,9 +1,17 @@
 import React from 'react';
 
-import styles from './page.module.scss';
+import Hero from '@/components/Hero';
+import Featured from '@/components/Featured';
 
 const page = () => {
-  return <div className={styles.wrapper}>page</div>;
+  return (
+    <>
+      <Hero />
+      <div className="container">
+        <Featured />
+      </div>
+    </>
+  );
 };
 
 export default page;
