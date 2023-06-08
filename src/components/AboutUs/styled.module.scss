@@ -1,0 +1,71 @@
+@import '../../styles/sass/constants';
+
+.about {
+  &-us {
+    margin-top: 128px;
+  }
+
+  &__wrapper {
+    padding: 80px 96px;
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-light-m;
+  }
+  
+  &__title {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 3;
+    color: $color-black;
+  }
+
+  &__content {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 16px;
+  }
+
+  &__item {
+    width: 47%;
+  }
+}
+
+.pattern {
+  &__container {
+    display: flex;
+  }
+
+  &__white {
+    width: 25%;
+    height: 23px;
+    background-color: $color-white;
+  }
+
+  &__yellow {
+    width: 50%;
+    height: 23px;
+    background-color: $color-primary;
+  }
+
+  &__purple {
+    width: 25%;
+    height: 23px;
+    background-color: $color-secondary;
+  }
+}
+
+.link__button {
+  font-size: 18px;
+  line-height: 32px;
+  border: none;
+  background-color: transparent;
+  color: $color-secondary;
+  transition: color 0.3s;
+  &:hover {
+    color: rgba($color-secondary, 0.8);
+    cursor: pointer;
+  }
+}
