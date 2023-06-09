@@ -16,7 +16,7 @@ const Authors: FC<AuthorsProps> = ({ authors }) => {
       <h2 className={sen.className}>List of Authors</h2>
       <div className={styles.authors__content}>
         {authors.map(({ fullName, occupation, company, urlToAvatar }) => (
-          <div className={styles.author}>
+          <div key={fullName} className={styles.author}>
             <div className={styles.author__image}>
               <img src={urlToAvatar} alt={fullName} />
             </div>

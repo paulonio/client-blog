@@ -1,9 +1,10 @@
-import type { Post } from '@/types/types';
+import type { PostType } from '@/types/types';
 
-export const POSTS: Post[] = [
+export const POSTS: PostType[] = [
   {
     username: 'John Doe',
     date: 'May 23, 2022',
+    tag: 'Business',
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     urlToImage: '/assets/images/featured-post.jpg',
@@ -11,27 +12,47 @@ export const POSTS: Post[] = [
   {
     username: 'John Doe',
     date: 'Aug 23, 2022',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    tag: 'Experience',
+    title: 'Step-by-step guide to choosing great font pairs',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    urlToImage: '/assets/images/featured-post.jpg',
+    urlToImage: '/assets/images/blog-featured.jpg',
   },
   {
     username: 'John Doe',
     date: 'Sep 23, 2022',
+    tag: 'Screen',
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    urlToImage: '/assets/images/featured-post.jpg',
+    urlToImage: '/assets/images/design-post.jpg',
   },
   {
     username: 'John Doe',
     date: 'May 23, 2022',
+    tag: 'Technology',
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    urlToImage: '/assets/images/featured-post.jpg',
+    urlToImage: '/assets/images/build-rapport.jpg',
   },
   {
     username: 'John Doe',
     date: 'Jan 23, 2022',
+    tag: 'Marketing',
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    urlToImage: '/assets/images/logo-design.jpg',
+  },
+  {
+    username: 'John Doe',
+    date: 'May 23, 2022',
+    tag: 'Life',
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
+    urlToImage: '/assets/images/figma-design.jpg',
+  },
+  {
+    username: 'John Doe',
+    date: 'May 23, 2022',
+    tag: 'Business',
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     urlToImage: '/assets/images/featured-post.jpg',
@@ -39,20 +60,7 @@ export const POSTS: Post[] = [
   {
     username: 'John Doe',
     date: 'May 23, 2022',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    urlToImage: '/assets/images/featured-post.jpg',
-  },
-  {
-    username: 'John Doe',
-    date: 'May 23, 2022',
-    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-    body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
-    urlToImage: '/assets/images/featured-post.jpg',
-  },
-  {
-    username: 'John Doe',
-    date: 'May 23, 2022',
+    tag: 'Experience',
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
     body: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.',
     urlToImage: '/assets/images/featured-post.jpg',

@@ -15,7 +15,7 @@ import { LOGOS } from '@/constants/logos';
 import { TESTIMONIALS } from '@/constants/testimonials';
 import Join from '@/components/Join';
 
-const page = () => {
+const Home = () => {
   return (
     <>
       <Hero />
@@ -33,4 +33,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Home;

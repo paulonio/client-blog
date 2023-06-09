@@ -1,0 +1,35 @@
+import React from 'react';
+import Button from '../Button';
+import { sen } from '@/styles/fonts';
+
+import styles from './styled.module.scss';
+import { POSTS } from '@/constants/posts';
+
+const post = POSTS[1];
+
+const BlogFeatured = () => {
+  const { username, date, title, body, urlToImage } = post;
+
+  return (
+    <section className={styles.blog}>
+      <div className="container">
+        <div className={styles.blog__wrapper}>
+          <div className={styles.blog__featured}>
+            <h5>Featured Post</h5>
+            <h2 className={sen.className}>{title}</h2>
+            <p className="body-l">
+              By <span className={styles.name}>{username}</span> | {date}
+            </p>
+            <p className="body-s">{body}</p>
+            <Button>Read More {'>'}</Button>
+          </div>
+          <div>
+            <img src={urlToImage} alt={username} />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default BlogFeatured;

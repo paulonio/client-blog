@@ -16,7 +16,7 @@ const Logos: FC<LogosProps> = ({ logos }) => {
         <h4 className={`${sen.className} ${styles.title}`}>Featured in</h4>
       </div>
       {logos.map((Icon) => (
-        <Icon className={styles.icon} />
+        <Icon key={`${Icon}`} className={styles.icon} />
       ))}
     </section>
   );

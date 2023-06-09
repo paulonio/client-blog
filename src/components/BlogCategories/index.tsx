@@ -1,17 +1,19 @@
 import React from 'react';
+import Categories from '../CategoryBlock/Categories';
+
 import { CATEGORY_ITEMS } from '@/constants/constants';
+
 import { sen } from '@/styles/fonts';
 
 import styles from './styled.module.scss';
-import Categories from './Categories';
 
-const CategoryBlock = () => {
+const BlogCategories = () => {
   return (
     <section className={styles.categories}>
-      <h2 className={sen.className}>Choose A Category</h2>
+      <h2 className={sen.className}>All Categories</h2>
       <Categories categories={CATEGORY_ITEMS} />
     </section>
   );
 };
 
-export default CategoryBlock;
+export default BlogCategories;

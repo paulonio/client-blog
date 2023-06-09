@@ -1,8 +1,9 @@
 import { FC, SVGProps } from 'react';
 
-export interface Post {
+export interface PostType {
   username: string;
   date: string;
+  tag: string;
   title: string;
   body: string;
   urlToImage: string;
