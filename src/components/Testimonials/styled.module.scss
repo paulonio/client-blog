@@ -1,0 +1,93 @@
+@import '../../styles/sass/constants';
+
+.heading {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 12px;
+
+  & h2 {
+    margin-bottom: 4px;
+  }
+}
+
+.testimonial {
+  margin-top: 128px;
+  padding: 80px 112px 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  background-color: $color-light-s;
+
+  &__wrapper {
+    width: 59%;
+    padding-left: 96px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 121px;
+    border-left: solid 1px rgba($color-dark-s, 0.4);
+
+    & h4 {
+      padding-right: 62px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 16px;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 24px;
+
+  & button {
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: $color-black;
+    border: none;
+
+    & svg {
+      fill: $color-light-m;
+    }
+  
+    &:disabled {
+      width: 48px;
+      height: 48px;
+      background-color: $color-white;
+      & svg {
+        fill: $color-black;
+      }
+    }
+  }
+}

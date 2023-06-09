@@ -25,3 +25,11 @@ export interface Author {
   company: string;
   urlToAvatar: string;
 }
+
+export interface Testimonial {
+  fullName: string;
+  city: string;
+  country: string;
+  urlToAvatar: string;
+  message: string;
+}
