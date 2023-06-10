@@ -15,7 +15,7 @@ const BlogFeatured = () => {
       <div className="container">
         <div className={styles.blog__wrapper}>
           <div className={styles.blog__featured}>
-            <h5>Featured Post</h5>
+            <h5>FEATURED POST</h5>
             <h2 className={sen.className}>{title}</h2>
             <p className="body-l">
               By <span className={styles.name}>{username}</span> | {date}

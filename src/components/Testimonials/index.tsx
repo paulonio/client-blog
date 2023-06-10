@@ -5,13 +5,14 @@ import PrevIcon from '@/icons/PrevIcon';
 import NextIcon from '@/icons/NextIcon';
 
 import styles from './styled.module.scss';
+import Profile from './Profile';
 
 interface TestimonialsProps {
   testimonial: Testimonial;
 }
 
 const Testimonials: FC<TestimonialsProps> = ({ testimonial }) => {
-  const { fullName, country, city, urlToAvatar, message } = testimonial;
+  const { profile, message } = testimonial;
 
   return (
     <section className={styles.testimonial}>
@@ -19,17 +20,7 @@ const Testimonials: FC<TestimonialsProps> = ({ testimonial }) => {
       <div className={styles.testimonial__wrapper}>
         <h4>{message}</h4>
         <div className={styles.testimonial__footer}>
-          <div className={styles.profile}>
-            <div className={styles.avatar}>
-              <img src={urlToAvatar} alt={fullName} />
-            </div>
-            <div>
-              <h4>{fullName}</h4>
-              <p className="body-s">
-                {city}, {country}
-              </p>
-            </div>
-          </div>
+          <Profile profile={profile} />
           <div className={styles.buttons}>
             <button type="button" className={styles.prev}>
               <PrevIcon className={styles.prev__icon} />

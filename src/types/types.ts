@@ -1,6 +1,7 @@
 import { FC, SVGProps } from 'react';
 
 export interface PostType {
+  urlToAvatar: string;
   username: string;
   date: string;
   tag: string;
@@ -27,10 +28,14 @@ export interface Author {
   urlToAvatar: string;
 }
 
-export interface Testimonial {
+export interface User {
   fullName: string;
   city: string;
   country: string;
   urlToAvatar: string;
+}
+
+export interface Testimonial {
+  profile: User;
   message: string;
 }
