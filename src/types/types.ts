@@ -10,8 +10,13 @@ export interface PostType {
   urlToImage: string;
 }
 
-export interface About {
+export interface AboutType {
   title: string;
+  body: string;
+}
+
+export interface InfoType {
+  amount: string;
   description: string;
 }
 
@@ -38,4 +43,11 @@ export interface User {
 export interface Testimonial {
   profile: User;
   message: string;
+}
+
+export interface AboutContentType {
+  title: string;
+  subtitle: string;
+  body: string;
+  urlToImage: string;
 }

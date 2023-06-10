@@ -1,0 +1,24 @@
+@import '../../styles/sass/constants';
+
+.wrapper {
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-light-m;
+}
+
+.heading {
+  width: 100%;
+  max-width: 515px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 16px;
+}
+
+.category {
+  margin-top: 16px;
+  font-size: 16px;
+  letter-spacing: 3px;
+}

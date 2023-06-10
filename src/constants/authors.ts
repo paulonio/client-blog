@@ -25,4 +25,28 @@ export const AUTHORS: Author[] = [
     company: 'Company',
     urlToAvatar: '/assets/images/Leslie.jpg',
   },
+  {
+    fullName: 'Guy Hawkins',
+    occupation: 'Content Writer',
+    company: 'Company',
+    urlToAvatar: '/assets/images/Guy.jpg',
+  },
+  {
+    fullName: 'Eleanor Pena',
+    occupation: 'Content Writer',
+    company: 'Company',
+    urlToAvatar: '/assets/images/Eleanor.jpg',
+  },
+  {
+    fullName: 'Robert Fox',
+    occupation: 'Content Writer',
+    company: 'Company',
+    urlToAvatar: '/assets/images/Robert.jpg',
+  },
+  {
+    fullName: 'Jacob Jones',
+    occupation: 'Content Writer',
+    company: 'Company',
+    urlToAvatar: '/assets/images/Jacob.jpg',
+  },
 ];

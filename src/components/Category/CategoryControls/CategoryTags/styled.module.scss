@@ -1,0 +1,27 @@
+@import '../../../../styles/sass/constants';
+
+.tags__wrapper {
+  width: 298px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.tag__wrapper {
+  width: calc(52% - 16px);
+  padding: 8px 0;
+  font-size: 14px;
+  line-height: 32px;
+  font-weight: 700;
+  color: $color-black;
+  border: solid 2px $color-dark-s;
+  opacity: 0.7;
+  border-radius: 28px;
+  background-color: transparent;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+}

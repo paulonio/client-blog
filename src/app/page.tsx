@@ -15,6 +15,8 @@ import { LOGOS } from '@/constants/logos';
 import { TESTIMONIALS } from '@/constants/testimonials';
 import Join from '@/components/Join';
 
+const authors = AUTHORS.slice(0, 4);
+
 const Home = () => {
   return (
     <>
@@ -24,7 +26,7 @@ const Home = () => {
         <AboutUs />
         <CategoryBlock />
         <Special post={SPECIAL_POST} />
-        <Authors authors={AUTHORS} />
+        <Authors authors={authors} />
         <Logos logos={LOGOS} />
         <Testimonials testimonial={TESTIMONIALS} />
         <Join />

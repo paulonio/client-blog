@@ -11,13 +11,15 @@
     margin-top: 48px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 32px;
   }
 }
 
 .author {
-  width: 24%;
+  width: 23%;
+  max-width: 296px;
   padding: 40px 28px;
   display: flex;
   flex-direction: column;
@@ -35,6 +37,10 @@
     & img {
       border-radius: 50%;
     }
+  }
+
+  &__bio {
+    text-align: center;
   }
 
   & ul {

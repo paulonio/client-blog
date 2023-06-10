@@ -1,0 +1,12 @@
+.wrapper {
+  margin-top: 128px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.content__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}

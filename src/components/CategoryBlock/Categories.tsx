@@ -7,18 +7,19 @@ import styles from './styled.module.scss';
 
 interface CategoriesProps {
   categories: Category[];
+  type: 'home' | 'controls';
 }
 
-const Categories: FC<CategoriesProps> = ({ categories }) => {
+const Categories: FC<CategoriesProps> = ({ categories, type }) => {
   return (
-    <div className={styles.categories__wrapper}>
+    <div className={`${styles.categories__wrapper} ${styles[type]}`}>
       {categories.map(({ title, description, Icon }) => (
-        <div key={`${Icon}`} className={styles.category__wrapper}>
-          <div className={styles.icon__wrapper}>
+        <div key={`${Icon}`} className={`${styles.category__wrapper} ${styles[type]}`}>
+          <div className={`${styles.icon__wrapper} ${styles[type]}`}>
             <Icon />
           </div>
           <h3 className={sen.className}>{title}</h3>
-          <p className="body-s">{description}</p>
+          {type === 'home' && <p className="body-s">{description}</p>}
         </div>
       ))}
     </div>
