@@ -6,7 +6,7 @@ import { Author } from '@/types/types';
 import Socials from '@/components/Socials';
 
 import styles from './styled.module.scss';
-import { parseName } from '@/utils/utils';
+import { parseString } from '@/utils/utils';
 
 interface AuthorsProps {
   authors: Author[];
@@ -18,7 +18,7 @@ const Authors: FC<AuthorsProps> = ({ authors }) => {
       <h2 className={sen.className}>List of Authors</h2>
       <div className={styles.authors__content}>
         {authors.map(({ fullName, occupation, company, urlToAvatar }) => {
-          const path = parseName(fullName);
+          const path = parseString(fullName);
           return (
             <Link key={fullName} className={styles.author} href={`/about/${path}`}>
               <div className={styles.author__image}>

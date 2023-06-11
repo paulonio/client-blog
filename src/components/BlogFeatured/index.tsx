@@ -9,7 +9,7 @@ import { POSTS } from '@/constants/posts';
 const post = POSTS[1];
 
 const BlogFeatured = () => {
-  const { username, date, title, body, urlToImage } = post;
+  const { id, username, date, title, body, urlToImage } = post;
 
   return (
     <section className={styles.blog}>
@@ -22,7 +22,7 @@ const BlogFeatured = () => {
               By <span className={styles.name}>{username}</span> | {date}
             </p>
             <p className="body-s">{body}</p>
-            <Link href="/blog/post">
+            <Link href={`/blog/${id}`}>
               <Button>Read More {'>'}</Button>
             </Link>
           </div>

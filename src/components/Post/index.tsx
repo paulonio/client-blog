@@ -8,14 +8,14 @@ interface PostProps {
 }
 
 const Post: FC<PostProps> = ({ post }) => {
-  const { tag, title, body, urlToImage } = post;
+  const { category, title, body, urlToImage } = post;
   return (
     <div className={styles.post}>
       <div className={styles.image}>
-        <img src={urlToImage} alt={`${tag} post`} />
+        <img src={urlToImage} alt={`${category} post`} />
       </div>
       <div className={styles.content}>
-        <h5>{tag}</h5>
+        <h5>{category}</h5>
         <h2>{title}</h2>
         <p className="body-s">{body}</p>
       </div>

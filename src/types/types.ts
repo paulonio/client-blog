@@ -5,7 +5,8 @@ export interface PostType {
   urlToAvatar: string;
   username: string;
   date: string;
-  tag: string;
+  category: string;
+  tags: string[];
   title: string;
   body: string;
   urlToImage: string;

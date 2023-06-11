@@ -13,7 +13,7 @@ interface SinglePostProps {
 }
 
 const FeaturedPost: FC<SinglePostProps> = ({ post }) => {
-  const { username, date, title, body, urlToImage } = post;
+  const { id, username, date, title, body, urlToImage } = post;
 
   return (
     <div className={styles.featured__post}>
@@ -29,7 +29,7 @@ const FeaturedPost: FC<SinglePostProps> = ({ post }) => {
           <h3 className={sen.className}>{title}</h3>
           <p className="body-s">{body}</p>
         </div>
-        <Link href="/blog/post">
+        <Link href={`/blog/${id}`}>
           <Button>Read More {'>'}</Button>
         </Link>
       </div>

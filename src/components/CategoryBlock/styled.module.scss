@@ -44,6 +44,11 @@
     border: solid 1px $color-dark-s;
   }
 
+  &.active {
+    background-color: $color-primary;
+    border: $color-primary;
+  }
+
   &:hover {
     background-color: $color-primary;
     border-color: $color-primary;

@@ -25,3 +25,8 @@
     cursor: pointer;
   }
 }
+
+.active {
+  opacity: 1;
+  background-color: $color-primary;
+}

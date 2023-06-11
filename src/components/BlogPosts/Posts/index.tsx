@@ -13,7 +13,7 @@ const Posts: FC<PostsProps> = ({ posts }) => {
   return (
     <div className={styles.posts__wrapper}>
       {posts.map((post) => (
-        <Link href={`/blog/${post.id}`}>
+        <Link key={post.id} href={`/blog/${post.id}`}>
           <Post key={`${post.id}`} post={post} />
         </Link>
       ))}
