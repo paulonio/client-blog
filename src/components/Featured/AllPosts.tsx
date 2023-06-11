@@ -1,12 +1,13 @@
 import React, { FC } from 'react';
 
-import { Post } from '@/types/types';
+import Link from 'next/link';
+import { PostType } from '@/types/types';
 import { sen } from '@/styles/fonts';
 
 import styles from './styled.module.scss';
 
 interface AllPostsProps {
-  posts: Post[];
+  posts: PostType[];
 }
 
 const AllPosts: FC<AllPostsProps> = ({ posts }) => {
@@ -14,9 +15,11 @@ const AllPosts: FC<AllPostsProps> = ({ posts }) => {
     <div className={styles.posts}>
       <div className={styles.posts__header}>
         <h2 className={sen.className}>All Posts</h2>
-        <button type="button" className={`body-s ${styles.link__button}`}>
-          View All
-        </button>
+        <Link href="/blog">
+          <button type="button" className={`body-s ${styles.link__button}`}>
+            View All
+          </button>
+        </Link>
       </div>
       <div className={styles.posts__wrapper}>
         {posts.map((post) => (

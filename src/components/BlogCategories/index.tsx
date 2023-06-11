@@ -11,7 +11,7 @@ const BlogCategories = () => {
   return (
     <section className={styles.categories}>
       <h2 className={sen.className}>All Categories</h2>
-      <Categories categories={CATEGORY_ITEMS} />
+      <Categories type="home" categories={CATEGORY_ITEMS} />
     </section>
   );
 };

@@ -1,0 +1,63 @@
+@import '../../../styles/sass/constants';
+
+.wrapper {
+  padding-top: 128px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 104px;
+  background-color: $color-light-m;
+}
+
+.title {
+  color: $color-black;
+}
+
+.heading {
+  width: 100%;
+  max-width: 952px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  &__wrapper {
+    width: 100%;
+    max-width: 669px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 24px;
+  }
+}
+
+.image {
+  width: 251px;
+  height: 294px;
+
+  & img { 
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.patterns__wrapper {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pattern {
+  &__right {
+    width: 26.5%;
+    height: 23px;
+    background-color: $color-secondary;
+  } 
+
+  &__left {
+    width: calc(100% - 26.5%);
+    height: 23px;
+    background-color: $color-primary;
+  }
+}

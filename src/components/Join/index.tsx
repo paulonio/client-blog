@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Button from '../Button';
 import { sen } from '@/styles/fonts';
 
@@ -12,7 +13,9 @@ const Join = () => {
         <p className="body-s">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
         </p>
-        <Button>Join Now</Button>
+        <Link href="/contact">
+          <Button>Join Now</Button>
+        </Link>
       </div>
     </section>
   );

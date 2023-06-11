@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 
+import Link from 'next/link';
 import { Category } from '@/types/types';
 import { sen } from '@/styles/fonts';
 
@@ -11,15 +12,32 @@ interface CategoriesProps {
 }
 
 const Categories: FC<CategoriesProps> = ({ categories, type }) => {
+  if (type === 'home') {
+    return (
+      <div className={`${styles.categories__wrapper} ${styles[type]}`}>
+        {categories.map(({ title, description, Icon }) => (
+          <Link key={`${Icon}`} href="/category">
+            <div className={`${styles.category__wrapper} ${styles[type]}`}>
+              <div className={`${styles.icon__wrapper} ${styles[type]}`}>
+                <Icon />
+              </div>
+              <h3 className={sen.className}>{title}</h3>
+              <p className="body-s">{description}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
+    );
+  }
+
   return (
     <div className={`${styles.categories__wrapper} ${styles[type]}`}>
-      {categories.map(({ title, description, Icon }) => (
+      {categories.map(({ title, Icon }) => (
         <div key={`${Icon}`} className={`${styles.category__wrapper} ${styles[type]}`}>
           <div className={`${styles.icon__wrapper} ${styles[type]}`}>
             <Icon />
           </div>
           <h3 className={sen.className}>{title}</h3>
-          {type === 'home' && <p className="body-s">{description}</p>}
         </div>
       ))}
     </div>

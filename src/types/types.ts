@@ -31,6 +31,7 @@ export interface Author {
   occupation: string;
   company: string;
   urlToAvatar: string;
+  bio: string;
 }
 
 export interface User {
@@ -50,4 +51,9 @@ export interface AboutContentType {
   subtitle: string;
   body: string;
   urlToImage: string;
+}
+
+export interface PrivacyType {
+  lastUpdated: string;
+  content: string;
 }

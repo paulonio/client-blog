@@ -1,14 +1,15 @@
 import React, { FC } from 'react';
 
+import Link from 'next/link';
 import Button from '@/components/Button';
 
-import type { Post } from '@/types/types';
+import type { PostType } from '@/types/types';
 import { sen } from '@/styles/fonts';
 
 import styles from './styled.module.scss';
 
 interface SinglePostProps {
-  post: Post;
+  post: PostType;
 }
 
 const FeaturedPost: FC<SinglePostProps> = ({ post }) => {
@@ -28,7 +29,9 @@ const FeaturedPost: FC<SinglePostProps> = ({ post }) => {
           <h3 className={sen.className}>{title}</h3>
           <p className="body-s">{body}</p>
         </div>
-        <Button>Read More {'>'}</Button>
+        <Link href="/blog/post">
+          <Button>Read More {'>'}</Button>
+        </Link>
       </div>
     </div>
   );

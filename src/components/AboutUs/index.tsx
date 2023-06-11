@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Pattern from './Pattern';
 
 import styles from './styled.module.scss';
@@ -18,9 +19,11 @@ const AboutUs = () => {
           <div className={styles.about__content}>
             <h2 className={sen.className}>{aboutTitle}</h2>
             <p className="body-s">{aboutBody}</p>
-            <button type="button" className={`${styles.link__button} ${sen.className}`}>
-              Read More {'>'}
-            </button>
+            <Link href="/about">
+              <button type="button" className={`${styles.link__button} ${sen.className}`}>
+                Read More {'>'}
+              </button>
+            </Link>
           </div>
         </div>
         <Mission mission={OUR_MISSION} />

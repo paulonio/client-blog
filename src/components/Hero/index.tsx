@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Link from 'next/link';
 import Button from '@/components/Button';
 
 import { sen } from '@/styles/fonts';
@@ -26,7 +27,9 @@ const Hero = () => {
               nulla pariatur. Excepteur sint occaecat cupidatat non proident.
             </p>
           </div>
-          <Button>Read More {`>`}</Button>
+          <Link href="/blog/post">
+            <Button>Read More {`>`}</Button>
+          </Link>
         </div>
       </div>
     </section>
