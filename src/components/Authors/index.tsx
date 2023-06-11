@@ -20,7 +20,7 @@ const Authors: FC<AuthorsProps> = ({ authors }) => {
         {authors.map(({ fullName, occupation, company, urlToAvatar }) => {
           const path = parseName(fullName);
           return (
-            <Link key={fullName} className={styles.author} href={`/authors/${path}`}>
+            <Link key={fullName} className={styles.author} href={`/about/${path}`}>
               <div className={styles.author__image}>
                 <img src={urlToAvatar} alt={fullName} />
               </div>

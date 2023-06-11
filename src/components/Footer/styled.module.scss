@@ -50,6 +50,10 @@
     color: $color-dark-s;
     background-color: transparent;
     border: solid 1px $color-dark-l;
+
+    &.error {
+      outline-color: red;
+    }
   }
 }
 

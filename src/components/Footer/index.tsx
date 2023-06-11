@@ -1,4 +1,10 @@
+'use client';
+
 import React from 'react';
+import emailjs from '@emailjs/browser';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
 
 import Button from '@/components/Button';
 import Navigation from '@/components/Navigation';
@@ -9,8 +15,35 @@ import { inter } from '@/styles/fonts';
 
 import styles from './styled.module.scss';
 import Socials from '../Socials';
+import { EMAIL_REGEXP } from '@/constants/contact';
+
+interface FooterFormProps {
+  email: string;
+}
+
+const schema = yup.object({
+  email: yup.string().trim().email().matches(EMAIL_REGEXP).required(),
+});
 
 const Footer = () => {
+  const { register, handleSubmit, reset } = useForm<FooterFormProps>({
+    resolver: yupResolver(schema),
+  });
+
+  const onSubmit: SubmitHandler<FooterFormProps> = (data) => {
+    emailjs
+      .send('service_zijuo46', 'template_beov2fl', { ...data }, 'WYxkO50AUT5PWYUGB')
+      .then(
+        (result) => {
+          alert(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      )
+      .finally(() => reset());
+  };
+
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -18,7 +51,7 @@ const Footer = () => {
           <h3 className={styles.title}>Modsen Client Blog</h3>
           <Navigation links={FOOTER_ROUTES} />
         </div>
-        <form className={styles.form}>
+        <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
           <h2 className={styles.form__title}>
             Subscribe to our news letter to get latest updates and news
           </h2>
@@ -27,8 +60,9 @@ const Footer = () => {
               className={`${styles.form__input} ${inter.className}`}
               type="email"
               placeholder="Enter Your Email"
+              {...register('email')}
             />
-            <Button>Subscribe</Button>
+            <Button type="submit">Subscribe</Button>
           </div>
         </form>
         <div className={styles.contact}>

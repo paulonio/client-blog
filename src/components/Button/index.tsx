@@ -1,14 +1,17 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, ReactNode, HTMLAttributes } from 'react';
 
 import styles from './styled.module.scss';
 
-interface ButtonProps {
+type ButtonProps = {
   children: ReactNode;
-}
+  type?: 'button' | 'reset' | 'submit';
+} & HTMLAttributes<HTMLButtonElement>;
 
-const Button: FC<ButtonProps> = ({ children }) => {
+const Button: FC<ButtonProps> = ({ type, children }, props) => {
+  const buttonType = type || 'button';
+
   return (
-    <button type="button" className={styles.button}>
+    <button type={buttonType} className={styles.button} {...props}>
       {children}
     </button>
   );

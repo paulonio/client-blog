@@ -49,6 +49,8 @@ export const CATEGORY_ITEMS: Category[] = [
   },
 ];
 
+export const CATEGORIES: string[] = ['Business', 'Economy', 'Startup', 'Technology'];
+
 export const CATEGORY_TAGS: string[] = [
   'Business',
   'Experience',

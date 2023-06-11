@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Button from '../Button';
 import { sen } from '@/styles/fonts';
 
@@ -21,7 +22,9 @@ const BlogFeatured = () => {
               By <span className={styles.name}>{username}</span> | {date}
             </p>
             <p className="body-s">{body}</p>
-            <Button>Read More {'>'}</Button>
+            <Link href="/blog/post">
+              <Button>Read More {'>'}</Button>
+            </Link>
           </div>
           <div>
             <img src={urlToImage} alt={username} />

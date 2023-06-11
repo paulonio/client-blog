@@ -6,6 +6,12 @@
   display: flex;
   align-items: center;
   gap: 32px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $color-light-s;
+    cursor: pointer;
+  }
 }
 
 .image {

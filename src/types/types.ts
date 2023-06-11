@@ -1,6 +1,7 @@
 import { FC, SVGProps } from 'react';
 
 export interface PostType {
+  id: string;
   urlToAvatar: string;
   username: string;
   date: string;

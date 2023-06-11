@@ -2,6 +2,7 @@ import type { PostType } from '@/types/types';
 
 export const POSTS: PostType[] = [
   {
+    id: '1',
     urlToAvatar: '/assets/images/Dianne.jpg',
     username: 'John Doe',
     date: 'May 23, 2022',
@@ -11,6 +12,7 @@ export const POSTS: PostType[] = [
     urlToImage: '/assets/images/featured-post.jpg',
   },
   {
+    id: '2',
     urlToAvatar: '/assets/images/Floyd.jpg',
     username: 'John Doe',
     date: 'Aug 23, 2022',
@@ -20,6 +22,7 @@ export const POSTS: PostType[] = [
     urlToImage: '/assets/images/blog-featured.jpg',
   },
   {
+    id: '3',
     urlToAvatar: '/assets/images/Jenny.jpg',
     username: 'John Doe',
     date: 'Sep 23, 2022',
@@ -29,6 +32,7 @@ export const POSTS: PostType[] = [
     urlToImage: '/assets/images/design-post.jpg',
   },
   {
+    id: '4',
     urlToAvatar: '/assets/images/Jonathan.jpg',
     username: 'John Doe',
     date: 'May 23, 2022',
@@ -38,6 +42,7 @@ export const POSTS: PostType[] = [
     urlToImage: '/assets/images/build-rapport.jpg',
   },
   {
+    id: '5',
     urlToAvatar: '/assets/images/Leslie.jpg',
     username: 'John Doe',
     date: 'Jan 23, 2022',
@@ -47,6 +52,7 @@ export const POSTS: PostType[] = [
     urlToImage: '/assets/images/logo-design.jpg',
   },
   {
+    id: '6',
     urlToAvatar: '/assets/images/Jenny.jpg',
     username: 'John Doe',
     date: 'May 23, 2022',
@@ -56,6 +62,7 @@ export const POSTS: PostType[] = [
     urlToImage: '/assets/images/figma-design.jpg',
   },
   {
+    id: '7',
     urlToAvatar: '/assets/images/Dianne.jpg',
     username: 'John Doe',
     date: 'May 23, 2022',
@@ -65,6 +72,7 @@ export const POSTS: PostType[] = [
     urlToImage: '/assets/images/featured-post.jpg',
   },
   {
+    id: '8',
     urlToAvatar: '/assets/images/.jpg',
     username: 'John Doe',
     date: 'May 23, 2022',

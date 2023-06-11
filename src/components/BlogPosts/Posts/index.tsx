@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import Link from 'next/link';
 import Post from '@/components/Post';
 
 import styles from './styled.module.scss';
@@ -12,7 +13,9 @@ const Posts: FC<PostsProps> = ({ posts }) => {
   return (
     <div className={styles.posts__wrapper}>
       {posts.map((post) => (
-        <Post key={`${post.urlToImage} ${post.title}`} post={post} />
+        <Link href={`/blog/${post.id}`}>
+          <Post key={`${post.id}`} post={post} />
+        </Link>
       ))}
     </div>
   );
