@@ -1,0 +1,17 @@
+@import '../../../styles/sass/constants';
+
+.button {
+  margin-left: 32px;
+  padding: 16px 48px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $color-black;
+  background-color: $color-white;
+  border: none;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: $color-light-s;
+    cursor: pointer;
+  }
+}

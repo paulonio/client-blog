@@ -1,0 +1,59 @@
+@import '../../styles/sass/constants';
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: .5s;
+
+  &__active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.modal {
+  width: 100%;
+  max-width: 840px;
+  height: calc(840px * 9 / 16);
+  position: relative;
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(0.3);
+  transition: transform 0.5s;
+
+  &__active {
+    transform: scale(1);
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: -30px;
+  right: -20px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  & svg {
+    stroke: $color-white;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+
+// .close-button {
+
+// }
+

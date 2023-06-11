@@ -5,6 +5,7 @@ import Navigation from '@/components/Navigation';
 import { ROUTES } from '@/constants/routes';
 
 import styles from './styled.module.scss';
+import VideoButton from './VideoButton';
 
 const Header = () => {
   return (
@@ -15,9 +16,10 @@ const Header = () => {
           <nav>
             <Navigation links={ROUTES} />
           </nav>
-          <button type="button" className={styles.button}>
+          <VideoButton>Video about us</VideoButton>
+          {/* <button type="button" className={styles.button}>
             Video about us
-          </button>
+          </button> */}
         </div>
       </div>
     </header>

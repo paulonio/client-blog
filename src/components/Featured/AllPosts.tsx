@@ -23,7 +23,7 @@ const AllPosts: FC<AllPostsProps> = ({ posts }) => {
       </div>
       <div className={styles.posts__wrapper}>
         {posts.map((post) => (
-          <div className={styles.post__container}>
+          <div key={post.id} className={styles.post__container}>
             <p className="body-l">
               By <span className={styles.name}>{post.username}</span> | {post.date}
             </p>
