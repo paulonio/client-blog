@@ -1,6 +1,6 @@
 import React, { FC, SVGProps } from 'react';
 
-const NextIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
+const ArrowIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
   return (
     <svg
       role="img"
@@ -16,4 +16,4 @@ const NextIcon: FC<SVGProps<SVGSVGElement>> = (props) => {
   );
 };
 
-export default NextIcon;
+export default ArrowIcon;

@@ -28,7 +28,7 @@ const Home = () => {
         <Special post={SPECIAL_POST} />
         <Authors authors={authors} />
         <Logos logos={LOGOS} />
-        <Testimonials testimonial={TESTIMONIALS} />
+        <Testimonials testimonials={TESTIMONIALS} />
         <Join />
       </div>
     </>

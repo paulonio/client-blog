@@ -11,7 +11,7 @@ import { POSTS } from '@/constants/posts';
 
 import styles from './styled.module.scss';
 import Posts from '@/components/BlogPosts/Posts';
-import { deleteTag, getFilteredPosts, getResults } from '@/utils/utils';
+import { deleteTag, getFilteredPosts, getFilteredPostsByCategory, getResults } from '@/utils/utils';
 
 interface CategoryControlsProps {
   currentCategory: string;
@@ -22,7 +22,14 @@ const CategoryControls: FC<CategoryControlsProps> = ({ currentCategory }) => {
   const [searchValue, setSearchValue] = useState<string>('');
 
   const filteredTags = useMemo(() => getResults(searchValue), [searchValue]);
-  const filteredPosts = useMemo(() => getFilteredPosts(POSTS, activeTags), [activeTags]);
+  const filteredPostsByCategory = useMemo(
+    () => getFilteredPostsByCategory(POSTS, currentCategory),
+    [currentCategory]
+  );
+  const filteredPostsByTags = useMemo(
+    () => getFilteredPosts(filteredPostsByCategory, activeTags),
+    [activeTags]
+  );
 
   const handleTagClick = (e: MouseEvent<HTMLElement>) => {
     const tag = e.currentTarget.getAttribute('data-tag');
@@ -42,7 +49,7 @@ const CategoryControls: FC<CategoryControlsProps> = ({ currentCategory }) => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.posts__wrapper}>
-        <Posts posts={filteredPosts} />
+        <Posts posts={filteredPostsByTags} />
       </div>
       <div>
         <div className={styles.search__bar}>

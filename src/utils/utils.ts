@@ -34,3 +34,18 @@ export const getFilteredPosts = (posts: PostType[], activeTags: string[]) => {
 
   return filteredPosts;
 };
+
+export const getFilteredPostsByCategory = (posts: PostType[], currentCategory: string) => {
+  const filteredPosts = posts.filter(
+    ({ category }) => parseString(category) === parseString(currentCategory)
+  );
+
+  return filteredPosts;
+};
+
+export const getPostsByPage = (posts: PostType[], page: number) => {
+  const start = page * 5;
+  const newPosts = posts.slice(start, start + 5);
+
+  return newPosts;
+};
