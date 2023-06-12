@@ -58,17 +58,6 @@
   }
 }
 
-.link__button {
-  border: none;
-  background-color: transparent;
-  color: $color-secondary;
-  transition: color 0.3s;
-  &:hover {
-    color: rgba($color-secondary, 0.8);
-    cursor: pointer;
-  }
-}
-
 .image {
   & img {
     width: 100%;

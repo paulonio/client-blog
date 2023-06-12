@@ -17,9 +17,6 @@ const Header = () => {
             <Navigation links={ROUTES} />
           </nav>
           <VideoButton>Video about us</VideoButton>
-          {/* <button type="button" className={styles.button}>
-            Video about us
-          </button> */}
         </div>
       </div>
     </header>
