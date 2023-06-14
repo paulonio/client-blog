@@ -3,8 +3,14 @@
 .wrapper {
   margin: 128px 0; 
   display: flex;
-  align-items: flex-start;
+  align-items: start;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 32px;
+  }
 }
 
 .categories__wrapper {

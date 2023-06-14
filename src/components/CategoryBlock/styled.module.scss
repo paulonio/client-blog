@@ -19,8 +19,12 @@
       max-width: 296px;
       display: flex;
       flex-direction: column;
-      align-items: start;
+      align-items: stretch;
       row-gap: 24px;
+
+      & a {
+        width: 100%;
+      }
     }
 
     & a {

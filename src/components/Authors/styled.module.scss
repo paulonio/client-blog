@@ -3,6 +3,10 @@
 .authors {
   margin-top: 128px;
 
+  @media screen and (max-width: 768px) {
+    margin-top: 32px;
+  }
+
   & h2 {
     text-align: center;
   }
