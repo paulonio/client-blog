@@ -3,13 +3,10 @@
 .navigation {
   display: flex;
   align-items: center;
+  gap: 24px;
 
   &__link {
     list-style: none;
-    margin-left: 24px;
-    &:first-child {
-      margin-left: 0;
-    }
 
     & a {
       font-size: 16px;
@@ -21,5 +18,9 @@
         color: $color-primary;
       }
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 }

@@ -3,13 +3,15 @@
 import React, { FC, ReactNode, useState } from 'react';
 import dynamic from 'next/dynamic';
 
+import Modal from '@/components/Modal';
+
 import styles from './styled.module.scss';
 
 interface VideoButtonProps {
   children: ReactNode;
 }
 
-const Modal = dynamic(() => import('@/components/Modal'), { ssr: false });
+// const Modal = dynamic(() => import('@/components/Modal'), { ssr: false });
 
 const VideoButton: FC<VideoButtonProps> = ({ children }) => {
   const [isActive, setActive] = useState<boolean>(false);

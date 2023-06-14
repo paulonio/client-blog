@@ -4,12 +4,38 @@
   margin-top: 128px;
   position: relative;
 
+  & h2 {
+    margin-top: 8px;
+    font-size: 48px;
+    line-height: 64px;
+    font-weight: 700;
+    letter-spacing: -2px;
+  }
+
+  & button {
+    margin-top: 16px;
+  }
+
   @media screen and (max-width: 1144px) {
     position: static;
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 0 12px;
+  }
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+
+    & h2 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    & button {
+      font-size: 15px;
+      line-height: 18px;
+    }
   }
 
   &__post {
@@ -28,18 +54,10 @@
       width: 100%;
       position: static;
     }
-  }
 
-  & h2 {
-    margin-top: 8px;
-    font-size: 48px;
-    line-height: 64px;
-    font-weight: 700;
-    letter-spacing: -2px;
-  }
-
-  & button {
-    margin-top: 16px;
+    @media screen and (max-width: 768px) {
+      padding: 10px;
+    }
   }
 }
 
@@ -52,12 +70,21 @@
   justify-content: center;
   overflow: hidden;
 
+  & img {
+    height: 100%;
+    width: auto;
+  }
+
   @media screen and (max-width: 1144px) {
     height: 460px;
   }
 
-  & img {
-    height: 100%;
-    width: auto;
+  @media screen and (max-width: 390px) {
+    height: 250px;
+
+    // & img {
+    //   width: 150%;
+    //   height: 100%;
+    // }
   }
 }

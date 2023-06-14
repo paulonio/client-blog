@@ -12,14 +12,17 @@ interface LinkType {
 
 interface NavigationProps {
   links: LinkType[];
+  onClick?: () => void;
 }
 
-const Navigation: FC<NavigationProps> = ({ links }) => {
+const Navigation: FC<NavigationProps> = ({ links, onClick }) => {
   return (
     <ul className={styles.navigation}>
       {links.map(({ href, text }) => (
         <li key={href} className={`${styles.navigation__link} ${inter.className}`}>
-          <Link href={href}>{text}</Link>
+          <Link href={href} onClick={onClick}>
+            {text}
+          </Link>
         </li>
       ))}
     </ul>

@@ -11,6 +11,10 @@
       margin-left: 0;
     }
   }
+
+  @media screen and (max-width: 560px) {
+    justify-content: center;
+  }
 }
 
 .icon {

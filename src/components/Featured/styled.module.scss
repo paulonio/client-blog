@@ -8,6 +8,12 @@
   &__post {
     border: solid 1px rgba($color-dark-s, 0.1);
   }
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+  }
 }
 
 .post {
@@ -45,11 +51,16 @@
 
 .posts {
   max-width: 517px;
-
+  width: 100%;
+  
   &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: 1280px) {
+      padding: 0 6px;
+    }
   }
 
   &__wrapper {

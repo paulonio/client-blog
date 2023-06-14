@@ -14,4 +14,13 @@
     background-color: $color-light-s;
     cursor: pointer;
   }
+
+  @media screen and (max-width: 840px) {
+    margin-left: 0;
+    padding: 16px 32px;
+  }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }

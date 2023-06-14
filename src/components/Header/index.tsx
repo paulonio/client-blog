@@ -6,6 +6,7 @@ import { ROUTES } from '@/constants/routes';
 
 import styles from './styled.module.scss';
 import VideoButton from './VideoButton';
+import Burger from '../Burger';
 
 const Header = () => {
   return (
@@ -17,6 +18,7 @@ const Header = () => {
             <Navigation links={ROUTES} />
           </nav>
           <VideoButton>Video about us</VideoButton>
+          <Burger />
         </div>
       </div>
     </header>
