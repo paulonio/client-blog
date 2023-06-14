@@ -1,50 +1,30 @@
 'use client';
 
-import React, { ChangeEvent, FC, MouseEvent, useMemo, useState } from 'react';
+import React, { FC } from 'react';
 import { CATEGORY_ITEMS } from '@/constants/constants';
 
 import Categories from '@/components/CategoryBlock/Categories';
 import CategoryTags from './CategoryTags';
 
 import { sen } from '@/styles/fonts';
-import { POSTS } from '@/constants/posts';
 
 import styles from './styled.module.scss';
 import Posts from '@/components/BlogPosts/Posts';
-import { deleteTag, getFilteredPosts, getFilteredPostsByCategory, getResults } from '@/utils/utils';
+import { useCategoryControls } from '@/hooks/useCategoryControls';
 
 interface CategoryControlsProps {
   currentCategory: string;
 }
 
 const CategoryControls: FC<CategoryControlsProps> = ({ currentCategory }) => {
-  const [activeTags, setActiveTags] = useState<string[]>([]);
-  const [searchValue, setSearchValue] = useState<string>('');
-
-  const filteredTags = useMemo(() => getResults(searchValue), [searchValue]);
-  const filteredPostsByCategory = useMemo(
-    () => getFilteredPostsByCategory(POSTS, currentCategory),
-    [currentCategory]
-  );
-  const filteredPostsByTags = useMemo(
-    () => getFilteredPosts(filteredPostsByCategory, activeTags),
-    [activeTags]
-  );
-
-  const handleTagClick = (e: MouseEvent<HTMLElement>) => {
-    const tag = e.currentTarget.getAttribute('data-tag');
-    if (tag && activeTags.includes(tag)) {
-      setActiveTags(deleteTag(activeTags, tag));
-    } else if (tag) {
-      setActiveTags([...activeTags, tag]);
-    }
-    setSearchValue('');
-  };
-
-  const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setSearchValue(value);
-  };
+  const {
+    activeTags,
+    filteredTags,
+    filteredPostsByTags,
+    handleTagClick,
+    searchValue,
+    handleSearchChange,
+  } = useCategoryControls(currentCategory);
 
   return (
     <section className={styles.wrapper}>

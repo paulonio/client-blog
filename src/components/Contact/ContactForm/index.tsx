@@ -46,15 +46,7 @@ const ContactForm = () => {
   const onSubmit: SubmitHandler<FormType> = (data) => {
     emailjs
       .send('service_zijuo46', 'template_b5ggbe9', { ...data }, 'WYxkO50AUT5PWYUGB')
-      .then(
-        (result) => {
-          alert(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      )
-      .finally(() => reset());
+      .then(() => reset());
   };
 
   return (

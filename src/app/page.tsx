@@ -10,19 +10,23 @@ import Special from '@/components/Special';
 import Authors from '@/components/Authors';
 import Logos from '@/components/Logos';
 import Testimonials from '@/components/Testimonials';
+import Join from '@/components/Join';
 
 import { SPECIAL_POST } from '@/constants/constants';
 import { AUTHORS } from '@/constants/authors';
 import { LOGOS } from '@/constants/logos';
 import { TESTIMONIALS } from '@/constants/testimonials';
-import Join from '@/components/Join';
+
+import { getHeroPost } from '@/utils/utils';
 
 const authors = AUTHORS.slice(0, 4);
 
 const Home = () => {
+  const heroPost = getHeroPost();
+
   return (
     <>
-      <Hero />
+      <Hero post={heroPost} />
       <div className="container">
         <Featured />
         <AboutUs />

@@ -7,7 +7,6 @@ import OtherPosts from '@/components/PostHeader/OtherPosts';
 import Join from '@/components/Join';
 import { getPost } from '@/utils/utils';
 
-// const [post] = POSTS;
 const posts = POSTS.slice(0, 3);
 
 interface BlogPostProps {
@@ -21,7 +20,7 @@ const BlogPost: FC<BlogPostProps> = ({ params }) => {
   return (
     <>
       <PostHeader post={post} />
-      <PostImage urlToImage={post.urlToImage} tag={post.tag} />
+      <PostImage urlToImage={post.urlToImage} tag={post.category} />
       <PostContent />
       <OtherPosts posts={posts} />
       <Join />

@@ -33,15 +33,7 @@ const Footer = () => {
   const onSubmit: SubmitHandler<FooterFormProps> = (data) => {
     emailjs
       .send('service_zijuo46', 'template_beov2fl', { ...data }, 'WYxkO50AUT5PWYUGB')
-      .then(
-        (result) => {
-          alert(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      )
-      .finally(() => reset());
+      .then(() => reset());
   };
 
   return (

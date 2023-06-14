@@ -1,16 +1,5 @@
 import type { Testimonial } from '@/types/types';
 
-// export const TESTIMONIALS: Testimonial = {
-//   profile: {
-//     fullName: 'Jonathan Vallem',
-//     city: 'New york',
-//     country: 'USA',
-//     urlToAvatar: '/assets/images/Jonathan.jpg',
-//   },
-//   message:
-//     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-// };
-
 export const TESTIMONIALS: Testimonial[] = [
   {
     profile: {
@@ -30,7 +19,7 @@ export const TESTIMONIALS: Testimonial[] = [
       urlToAvatar: '/assets/images/Floyd.jpg',
     },
     message:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Donec hendrerit felis eget tortor sollicitudin, eu suscipit nibh convallis. Mauris vel sapien non dui lacinia rhoncus nec ac enim.',
   },
   {
     profile: {
@@ -40,7 +29,7 @@ export const TESTIMONIALS: Testimonial[] = [
       urlToAvatar: '/assets/images/Jenny.jpg',
     },
     message:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Nunc quis venenatis libero. Curabitur id nunc ornare, tempus nisi sed, gravida purus.',
   },
   {
     profile: {
@@ -50,6 +39,6 @@ export const TESTIMONIALS: Testimonial[] = [
       urlToAvatar: '/assets/images/Robert.jpg',
     },
     message:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Fusce ultrices arcu at nibh tempor, quis pellentesque sapien tempor. Aliquam malesuada elementum elit sit amet finibus.',
   },
 ];

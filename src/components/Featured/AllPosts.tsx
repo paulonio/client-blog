@@ -5,6 +5,7 @@ import { PostType } from '@/types/types';
 import { sen } from '@/styles/fonts';
 
 import styles from './styled.module.scss';
+import Button from '../Button';
 
 interface AllPostsProps {
   posts: PostType[];
@@ -16,9 +17,7 @@ const AllPosts: FC<AllPostsProps> = ({ posts }) => {
       <div className={styles.posts__header}>
         <h2 className={sen.className}>All Posts</h2>
         <Link href="/blog">
-          <button type="button" className={`body-s ${styles.link__button}`}>
-            View All
-          </button>
+          <Button buttonType="link">View All</Button>
         </Link>
       </div>
       <div className={styles.posts__wrapper}>

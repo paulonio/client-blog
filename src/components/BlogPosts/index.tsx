@@ -1,30 +1,18 @@
 'use client';
 
-import React, { useMemo, useState } from 'react';
+import React from 'react';
+
+import Posts from './Posts';
+
+import { usePagination } from '@/hooks/usePagination';
+
 import { sen } from '@/styles/fonts';
 
 import styles from './styled.module.scss';
-import { POSTS } from '@/constants/posts';
-import Posts from './Posts';
-import { getPostsByPage } from '@/utils/utils';
 
 const BlogPosts = () => {
-  const [page, setPage] = useState<number>(0);
-  const lastPage = Math.floor(POSTS.length / 5);
-
-  const posts = useMemo(() => getPostsByPage(POSTS, page), [page]);
-
-  const handleNextClick = () => {
-    if (page !== lastPage) {
-      setPage((prev) => prev + 1);
-    }
-  };
-
-  const handlePrevClick = () => {
-    if (page !== 0) {
-      setPage((prev) => prev - 1);
-    }
-  };
+  const { posts, isPrevDisabled, isNextDisabled, handleNextClick, handlePrevClick } =
+    usePagination();
 
   return (
     <section className={styles.posts}>
@@ -33,7 +21,7 @@ const BlogPosts = () => {
       <div className={styles.buttons}>
         <button
           type="button"
-          disabled={page === 0}
+          disabled={isPrevDisabled}
           className={styles.button}
           onClick={handlePrevClick}
         >
@@ -41,7 +29,7 @@ const BlogPosts = () => {
         </button>
         <button
           type="button"
-          disabled={page === lastPage}
+          disabled={isNextDisabled}
           className={styles.button}
           onClick={handleNextClick}
         >

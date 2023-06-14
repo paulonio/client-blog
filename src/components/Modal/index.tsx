@@ -2,6 +2,7 @@
 
 import React, { FC, ReactNode } from 'react';
 import { createPortal } from 'react-dom';
+
 import CrossIcon from '@/icons/CrossIcon';
 
 import styles from './styled.module.scss';

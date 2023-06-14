@@ -1,3 +1,4 @@
+import { AUTHORS } from '@/constants/authors';
 import { CATEGORY_TAGS } from '@/constants/constants';
 import { POSTS } from '@/constants/posts';
 import { PostType } from '@/types/types';
@@ -48,4 +49,16 @@ export const getPostsByPage = (posts: PostType[], page: number) => {
   const newPosts = posts.slice(start, start + 5);
 
   return newPosts;
+};
+
+export const getCurrentAuthor = (author: string) => {
+  const [filteredAuthor] = AUTHORS.filter(({ fullName }) => parseString(fullName) === author);
+
+  return filteredAuthor;
+};
+
+export const getHeroPost = () => {
+  const [heroPost] = POSTS.filter(({ category }) => category === 'Startup');
+
+  return heroPost;
 };

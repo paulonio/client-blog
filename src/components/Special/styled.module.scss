@@ -4,6 +4,14 @@
   margin-top: 128px;
   position: relative;
 
+  @media screen and (max-width: 1144px) {
+    position: static;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 12px;
+  }
+
   &__post {
     width: 55%;
     padding: 80px;
@@ -15,6 +23,11 @@
     align-items: start;
     row-gap: 16px;
     background-color: $color-white;
+
+    @media screen and (max-width: 1144px) {
+      width: 100%;
+      position: static;
+    }
   }
 
   & h2 {
@@ -38,6 +51,10 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
+  @media screen and (max-width: 1144px) {
+    height: 460px;
+  }
 
   & img {
     height: 100%;

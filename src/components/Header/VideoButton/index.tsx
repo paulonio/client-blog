@@ -1,13 +1,15 @@
 'use client';
 
 import React, { FC, ReactNode, useState } from 'react';
-import Modal from '@/components/Modal';
+import dynamic from 'next/dynamic';
 
 import styles from './styled.module.scss';
 
 interface VideoButtonProps {
   children: ReactNode;
 }
+
+const Modal = dynamic(() => import('@/components/Modal'), { ssr: false });
 
 const VideoButton: FC<VideoButtonProps> = ({ children }) => {
   const [isActive, setActive] = useState<boolean>(false);

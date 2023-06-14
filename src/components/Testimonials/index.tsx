@@ -38,9 +38,9 @@ const Testimonials: FC<TestimonialsProps> = ({ testimonials }) => {
           <Heading />
           <div className={styles.testimonial__wrapper}>
             <div style={{ marginLeft: `${-index * 100}%` }} className={styles.slides}>
-              {testimonials.map(({ profile, message }, i) => {
+              {testimonials.map(({ profile, message }) => {
                 return (
-                  <div key={i} className={styles.slide}>
+                  <div key={profile.fullName} className={styles.slide}>
                     <h4>{message}</h4>
                     <div className={styles.testimonial__footer}>
                       <Profile profile={profile} />

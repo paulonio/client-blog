@@ -1,8 +1,7 @@
 import React, { FC, useMemo } from 'react';
 import AuthorsHeading from '@/components/Authors/AuthorHeading';
-import { AUTHORS } from '@/constants/authors';
 import AuthorPosts from '@/components/Authors/AuthorPosts';
-import { parseString } from '@/utils/utils';
+import { getCurrentAuthor } from '@/utils/utils';
 
 interface AutorProps {
   params: { author: string };
@@ -10,14 +9,11 @@ interface AutorProps {
 
 const AuthorPage: FC<AutorProps> = ({ params }) => {
   const { author } = params;
-  const [data] = useMemo(
-    () => AUTHORS.filter(({ fullName }) => parseString(fullName) === author),
-    [author]
-  );
+  const currentAuthor = useMemo(() => getCurrentAuthor(author), [author]);
 
   return (
     <>
-      <AuthorsHeading author={data} />
+      <AuthorsHeading author={currentAuthor} />
       <AuthorPosts />
       <div className="container" />
     </>

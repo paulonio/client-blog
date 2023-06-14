@@ -11,6 +11,13 @@
   border-right: solid 1px rgba($color-dark-s, 0.4);
   row-gap: 12px;
 
+  @media screen and (max-width: 1144px) {
+    border: none;
+    padding: 0;
+    text-align: center;
+  }
+
+
   & h2 {
     margin-bottom: 4px;
   }
@@ -27,6 +34,10 @@
   align-items: center;
   justify-content: space-between;
   background-color: $color-light-s;
+
+  @media screen and (max-width: 1144px) {
+    flex-direction: column;
+  }
 
   &__wrapper {
     width: 532px;

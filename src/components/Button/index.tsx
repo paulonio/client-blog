@@ -6,7 +6,7 @@ import styles from './styled.module.scss';
 type ButtonProps = {
   children: ReactNode;
   type?: 'button' | 'reset' | 'submit';
-  buttonType: 'primary' | 'link';
+  buttonType?: 'primary' | 'link';
 } & HTMLAttributes<HTMLButtonElement>;
 
 const Button: FC<ButtonProps> = ({ type, children, buttonType = 'primary' }, props) => {

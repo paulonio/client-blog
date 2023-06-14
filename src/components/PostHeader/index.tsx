@@ -9,7 +9,7 @@ interface PostHeaderProps {
 }
 
 const PostHeader: FC<PostHeaderProps> = ({ post }) => {
-  const { urlToAvatar, username, date, tag, title } = post;
+  const { urlToAvatar, username, date, category, title } = post;
 
   return (
     <section className={styles.post__title}>
@@ -23,7 +23,7 @@ const PostHeader: FC<PostHeaderProps> = ({ post }) => {
         </div>
       </div>
       <h1 className={styles.title}>{title}</h1>
-      <h4 className={sen.className}>{tag}</h4>
+      <h4 className={sen.className}>{category}</h4>
     </section>
   );
 };

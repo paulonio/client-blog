@@ -15,7 +15,7 @@ const OtherPosts: FC<OtherPostsProps> = ({ posts }) => {
       <h2 className={sen.className}>What to read next</h2>
       <div className={styles.other__wrapper}>
         {posts.map((post) => (
-          <Post post={post} />
+          <Post key={post.id} post={post} />
         ))}
       </div>
     </section>

@@ -9,6 +9,7 @@ import { sen } from '@/styles/fonts';
 import { ABOUT_US, OUR_MISSION } from '@/constants/constants';
 import Mission from './Mission';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+import Button from '../Button';
 
 const AboutUs = () => {
   const { title: aboutTitle, body: aboutBody } = ABOUT_US;
@@ -27,9 +28,7 @@ const AboutUs = () => {
                 <h2 className={sen.className}>{aboutTitle}</h2>
                 <p className="body-s">{aboutBody}</p>
                 <Link href="/about">
-                  <button type="button" className={`${styles.link__button} ${sen.className}`}>
-                    Read More {'>'}
-                  </button>
+                  <Button buttonType="link">Read More {'>'}</Button>
                 </Link>
               </div>
             </div>
