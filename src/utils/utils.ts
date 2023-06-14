@@ -57,6 +57,12 @@ export const getCurrentAuthor = (author: string) => {
   return filteredAuthor;
 };
 
+export const getAuthorsPosts = (author: string) => {
+  const authorsPosts = POSTS.filter(({ username }) => parseString(username) === author);
+
+  return authorsPosts;
+};
+
 export const getHeroPost = () => {
   const [heroPost] = POSTS.filter(({ category }) => category === 'Startup');
 

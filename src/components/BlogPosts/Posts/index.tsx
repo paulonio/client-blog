@@ -10,6 +10,14 @@ interface PostsProps {
 }
 
 const Posts: FC<PostsProps> = ({ posts }) => {
+  if (!posts.length) {
+    return (
+      <div className={styles.posts__wrapper}>
+        <h2 className={styles.message}>No result</h2>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.posts__wrapper}>
       {posts.map((post) => (

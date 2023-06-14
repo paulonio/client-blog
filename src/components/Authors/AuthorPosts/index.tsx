@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { sen } from '@/styles/fonts';
 
-import styles from './styled.module.scss';
 import Posts from '@/components/BlogPosts/Posts';
-import { POSTS } from '@/constants/posts';
 
-const posts = POSTS.slice(0, 2);
+import type { PostType } from '@/types/types';
 
-const AuthorPosts = () => {
+import styles from './styled.module.scss';
+
+interface AuthorPostsProps {
+  posts: PostType[];
+}
+
+const AuthorPosts: FC<AuthorPostsProps> = ({ posts }) => {
   return (
     <section className={styles.wrapper}>
       <h2 className={`${styles.title} ${sen.className}`}>My Posts</h2>

@@ -9,7 +9,7 @@
 }
 
 .tag__wrapper {
-  width: calc(52% - 16px);
+  flex-grow: 1;
   padding: 8px 0;
   font-size: 14px;
   line-height: 32px;
@@ -20,6 +20,15 @@
   border-radius: 28px;
   background-color: transparent;
   transition: opacity 0.3s;
+  &:nth-child(2) {
+    width: 149px;
+  }
+  &:nth-child(4) {
+    width: 181px;
+  }
+  &:nth-child(5) {
+    width: 178px;
+  }
   &:hover {
     opacity: 1;
     cursor: pointer;

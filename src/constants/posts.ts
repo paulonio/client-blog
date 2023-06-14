@@ -4,7 +4,7 @@ export const POSTS: PostType[] = [
   {
     id: '1',
     urlToAvatar: '/assets/images/Dianne.jpg',
-    username: 'John Doe',
+    username: 'Floyd Miles',
     date: 'May 23, 2022',
     category: 'Business',
     tags: ['Business'],
@@ -15,7 +15,7 @@ export const POSTS: PostType[] = [
   {
     id: '2',
     urlToAvatar: '/assets/images/Floyd.jpg',
-    username: 'John Doe',
+    username: 'Robert Fox',
     date: 'Aug 23, 2022',
     category: 'Startup',
     tags: ['Experience'],
@@ -26,7 +26,7 @@ export const POSTS: PostType[] = [
   {
     id: '3',
     urlToAvatar: '/assets/images/Jenny.jpg',
-    username: 'John Doe',
+    username: 'Leslie Alexandere',
     date: 'Sep 23, 2022',
     category: 'Startup',
     tags: ['Screen'],
@@ -37,7 +37,7 @@ export const POSTS: PostType[] = [
   {
     id: '4',
     urlToAvatar: '/assets/images/Jonathan.jpg',
-    username: 'John Doe',
+    username: 'Jacob Jones',
     date: 'May 23, 2022',
     category: 'Technology',
     tags: ['Technology'],
@@ -48,7 +48,7 @@ export const POSTS: PostType[] = [
   {
     id: '5',
     urlToAvatar: '/assets/images/Leslie.jpg',
-    username: 'John Doe',
+    username: 'Robert Fox',
     date: 'Jan 23, 2022',
     category: 'Economy',
     tags: ['Marketing'],
@@ -59,7 +59,7 @@ export const POSTS: PostType[] = [
   {
     id: '6',
     urlToAvatar: '/assets/images/Jenny.jpg',
-    username: 'John Doe',
+    username: 'Floyd Miles',
     date: 'May 23, 2022',
     category: 'Business',
     tags: ['Life'],
@@ -70,7 +70,7 @@ export const POSTS: PostType[] = [
   {
     id: '7',
     urlToAvatar: '/assets/images/Dianne.jpg',
-    username: 'John Doe',
+    username: 'Leslie Alexander',
     date: 'May 23, 2022',
     category: 'Business',
     tags: ['Business'],
@@ -81,7 +81,7 @@ export const POSTS: PostType[] = [
   {
     id: '8',
     urlToAvatar: '/assets/images/.jpg',
-    username: 'John Doe',
+    username: 'Floyd Miles',
     date: 'May 23, 2022',
     category: 'Technology',
     tags: ['Experience'],
@@ -92,7 +92,7 @@ export const POSTS: PostType[] = [
   {
     id: '9',
     urlToAvatar: '/assets/images/Dianne.jpg',
-    username: 'John Doe',
+    username: 'Leslie Alexander',
     date: 'May 23, 2022',
     category: 'Business',
     tags: ['Business'],
@@ -103,7 +103,7 @@ export const POSTS: PostType[] = [
   {
     id: '10',
     urlToAvatar: '/assets/images/Floyd.jpg',
-    username: 'John Doe',
+    username: 'Eleanor Pena',
     date: 'Aug 23, 2022',
     category: 'Startup',
     tags: ['Experience'],
@@ -114,7 +114,7 @@ export const POSTS: PostType[] = [
   {
     id: '11',
     urlToAvatar: '/assets/images/Jenny.jpg',
-    username: 'John Doe',
+    username: 'Floyd Miles',
     date: 'Sep 23, 2022',
     category: 'Startup',
     tags: ['Screen'],
@@ -125,7 +125,7 @@ export const POSTS: PostType[] = [
   {
     id: '12',
     urlToAvatar: '/assets/images/Jonathan.jpg',
-    username: 'John Doe',
+    username: 'Leslie Alexander',
     date: 'May 23, 2022',
     category: 'Technology',
     tags: ['Technology'],
@@ -136,7 +136,7 @@ export const POSTS: PostType[] = [
   {
     id: '13',
     urlToAvatar: '/assets/images/Leslie.jpg',
-    username: 'John Doe',
+    username: 'Robert Fox',
     date: 'Jan 23, 2022',
     category: 'Economy',
     tags: ['Marketing'],
@@ -147,7 +147,7 @@ export const POSTS: PostType[] = [
   {
     id: '14',
     urlToAvatar: '/assets/images/Jenny.jpg',
-    username: 'John Doe',
+    username: 'Eleanor Pena',
     date: 'May 23, 2022',
     category: 'Business',
     tags: ['Life'],
@@ -158,7 +158,7 @@ export const POSTS: PostType[] = [
   {
     id: '15',
     urlToAvatar: '/assets/images/Dianne.jpg',
-    username: 'John Doe',
+    username: 'Leslie Alexander',
     date: 'May 23, 2022',
     category: 'Business',
     tags: ['Business'],
@@ -169,7 +169,7 @@ export const POSTS: PostType[] = [
   {
     id: '16',
     urlToAvatar: '/assets/images/.jpg',
-    username: 'John Doe',
+    username: 'Guy Hawkins',
     date: 'May 23, 2022',
     category: 'Technology',
     tags: ['Experience'],
@@ -180,7 +180,7 @@ export const POSTS: PostType[] = [
   {
     id: '17',
     urlToAvatar: '/assets/images/Dianne.jpg',
-    username: 'John Doe',
+    username: 'Robert Fox',
     date: 'May 23, 2022',
     category: 'Business',
     tags: ['Business'],
@@ -191,7 +191,7 @@ export const POSTS: PostType[] = [
   {
     id: '18',
     urlToAvatar: '/assets/images/Floyd.jpg',
-    username: 'John Doe',
+    username: 'Floyd Miles',
     date: 'Aug 23, 2022',
     category: 'Startup',
     tags: ['Experience'],
@@ -202,7 +202,7 @@ export const POSTS: PostType[] = [
   {
     id: '19',
     urlToAvatar: '/assets/images/Jenny.jpg',
-    username: 'John Doe',
+    username: 'Eleanor Pena',
     date: 'Sep 23, 2022',
     category: 'Startup',
     tags: ['Screen'],
@@ -213,7 +213,7 @@ export const POSTS: PostType[] = [
   {
     id: '20',
     urlToAvatar: '/assets/images/Jonathan.jpg',
-    username: 'John Doe',
+    username: 'Leslie Alexander',
     date: 'May 23, 2022',
     category: 'Technology',
     tags: ['Technology'],
@@ -224,7 +224,7 @@ export const POSTS: PostType[] = [
   {
     id: '21',
     urlToAvatar: '/assets/images/Leslie.jpg',
-    username: 'John Doe',
+    username: 'Jenny Wilson',
     date: 'Jan 23, 2022',
     category: 'Economy',
     tags: ['Marketing'],
@@ -235,7 +235,7 @@ export const POSTS: PostType[] = [
   {
     id: '22',
     urlToAvatar: '/assets/images/Jenny.jpg',
-    username: 'John Doe',
+    username: 'Guy Hawkins',
     date: 'May 23, 2022',
     category: 'Business',
     tags: ['Life'],
@@ -246,7 +246,7 @@ export const POSTS: PostType[] = [
   {
     id: '23',
     urlToAvatar: '/assets/images/Dianne.jpg',
-    username: 'John Doe',
+    username: 'Dianne Russell',
     date: 'May 23, 2022',
     category: 'Business',
     tags: ['Business'],
@@ -257,7 +257,7 @@ export const POSTS: PostType[] = [
   {
     id: '24',
     urlToAvatar: '/assets/images/.jpg',
-    username: 'John Doe',
+    username: 'Floyd Miles',
     date: 'May 23, 2022',
     category: 'Technology',
     tags: ['Experience'],
@@ -268,7 +268,7 @@ export const POSTS: PostType[] = [
   {
     id: '25',
     urlToAvatar: '/assets/images/Dianne.jpg',
-    username: 'John Doe',
+    username: 'Jenny Wilson',
     date: 'May 23, 2022',
     category: 'Business',
     tags: ['Business'],
@@ -279,7 +279,7 @@ export const POSTS: PostType[] = [
   {
     id: '26',
     urlToAvatar: '/assets/images/Floyd.jpg',
-    username: 'John Doe',
+    username: 'Guy Hawkins',
     date: 'Aug 23, 2022',
     category: 'Startup',
     tags: ['Experience'],
@@ -290,7 +290,7 @@ export const POSTS: PostType[] = [
   {
     id: '27',
     urlToAvatar: '/assets/images/Jenny.jpg',
-    username: 'John Doe',
+    username: 'Dianne Russell',
     date: 'Sep 23, 2022',
     category: 'Startup',
     tags: ['Screen'],
@@ -301,7 +301,7 @@ export const POSTS: PostType[] = [
   {
     id: '28',
     urlToAvatar: '/assets/images/Jonathan.jpg',
-    username: 'John Doe',
+    username: 'Eleanor Pena',
     date: 'May 23, 2022',
     category: 'Technology',
     tags: ['Technology'],
@@ -312,7 +312,7 @@ export const POSTS: PostType[] = [
   {
     id: '29',
     urlToAvatar: '/assets/images/Leslie.jpg',
-    username: 'John Doe',
+    username: 'Jenny Wilson',
     date: 'Jan 23, 2022',
     category: 'Economy',
     tags: ['Marketing'],
@@ -323,7 +323,7 @@ export const POSTS: PostType[] = [
   {
     id: '30',
     urlToAvatar: '/assets/images/Jenny.jpg',
-    username: 'John Doe',
+    username: 'Guy Hawkins',
     date: 'May 23, 2022',
     category: 'Business',
     tags: ['Life'],
@@ -334,7 +334,7 @@ export const POSTS: PostType[] = [
   {
     id: '31',
     urlToAvatar: '/assets/images/Dianne.jpg',
-    username: 'John Doe',
+    username: 'Eleanor Pena',
     date: 'May 23, 2022',
     category: 'Business',
     tags: ['Business'],
@@ -345,7 +345,7 @@ export const POSTS: PostType[] = [
   {
     id: '32',
     urlToAvatar: '/assets/images/.jpg',
-    username: 'John Doe',
+    username: 'Dianne Russell',
     date: 'May 23, 2022',
     category: 'Technology',
     tags: ['Experience'],
@@ -356,7 +356,7 @@ export const POSTS: PostType[] = [
   {
     id: '33',
     urlToAvatar: '/assets/images/Dianne.jpg',
-    username: 'John Doe',
+    username: 'Guy Hawkins',
     date: 'May 23, 2022',
     category: 'Business',
     tags: ['Business'],
@@ -367,7 +367,7 @@ export const POSTS: PostType[] = [
   {
     id: '34',
     urlToAvatar: '/assets/images/Floyd.jpg',
-    username: 'John Doe',
+    username: 'Jenny Wilson',
     date: 'Aug 23, 2022',
     category: 'Startup',
     tags: ['Experience'],
@@ -378,7 +378,7 @@ export const POSTS: PostType[] = [
   {
     id: '35',
     urlToAvatar: '/assets/images/Jenny.jpg',
-    username: 'John Doe',
+    username: 'Guy Hawkins',
     date: 'Sep 23, 2022',
     category: 'Startup',
     tags: ['Screen'],
@@ -389,7 +389,7 @@ export const POSTS: PostType[] = [
   {
     id: '36',
     urlToAvatar: '/assets/images/Jonathan.jpg',
-    username: 'John Doe',
+    username: 'Robert Fox',
     date: 'May 23, 2022',
     category: 'Technology',
     tags: ['Technology'],
@@ -400,7 +400,7 @@ export const POSTS: PostType[] = [
   {
     id: '37',
     urlToAvatar: '/assets/images/Leslie.jpg',
-    username: 'John Doe',
+    username: 'Dianne Russell',
     date: 'Jan 23, 2022',
     category: 'Economy',
     tags: ['Marketing'],
@@ -411,7 +411,7 @@ export const POSTS: PostType[] = [
   {
     id: '38',
     urlToAvatar: '/assets/images/Jenny.jpg',
-    username: 'John Doe',
+    username: 'Jacob Jones',
     date: 'May 23, 2022',
     category: 'Business',
     tags: ['Life'],
@@ -422,7 +422,7 @@ export const POSTS: PostType[] = [
   {
     id: '39',
     urlToAvatar: '/assets/images/Dianne.jpg',
-    username: 'John Doe',
+    username: 'Jenny Wilson',
     date: 'May 23, 2022',
     category: 'Business',
     tags: ['Business'],
@@ -433,7 +433,7 @@ export const POSTS: PostType[] = [
   {
     id: '40',
     urlToAvatar: '/assets/images/.jpg',
-    username: 'John Doe',
+    username: 'Jacob Jones',
     date: 'May 23, 2022',
     category: 'Technology',
     tags: ['Experience'],
@@ -444,7 +444,7 @@ export const POSTS: PostType[] = [
   {
     id: '41',
     urlToAvatar: '/assets/images/Dianne.jpg',
-    username: 'John Doe',
+    username: 'Dianne Russell',
     date: 'May 23, 2022',
     category: 'Business',
     tags: ['Business'],
@@ -455,7 +455,7 @@ export const POSTS: PostType[] = [
   {
     id: '42',
     urlToAvatar: '/assets/images/Floyd.jpg',
-    username: 'John Doe',
+    username: 'Jenny Wilson',
     date: 'Aug 23, 2022',
     category: 'Startup',
     tags: ['Experience'],
@@ -466,7 +466,7 @@ export const POSTS: PostType[] = [
   {
     id: '43',
     urlToAvatar: '/assets/images/Jenny.jpg',
-    username: 'John Doe',
+    username: 'Guy Hawkins',
     date: 'Sep 23, 2022',
     category: 'Startup',
     tags: ['Screen'],
@@ -477,7 +477,7 @@ export const POSTS: PostType[] = [
   {
     id: '44',
     urlToAvatar: '/assets/images/Jonathan.jpg',
-    username: 'John Doe',
+    username: 'Jacob Jones',
     date: 'May 23, 2022',
     category: 'Technology',
     tags: ['Technology'],
@@ -488,7 +488,7 @@ export const POSTS: PostType[] = [
   {
     id: '45',
     urlToAvatar: '/assets/images/Leslie.jpg',
-    username: 'John Doe',
+    username: 'Guy Hawkins',
     date: 'Jan 23, 2022',
     category: 'Economy',
     tags: ['Marketing'],
@@ -499,7 +499,7 @@ export const POSTS: PostType[] = [
   {
     id: '46',
     urlToAvatar: '/assets/images/Jenny.jpg',
-    username: 'John Doe',
+    username: 'Dianne Russell',
     date: 'May 23, 2022',
     category: 'Business',
     tags: ['Life'],
@@ -510,7 +510,7 @@ export const POSTS: PostType[] = [
   {
     id: '47',
     urlToAvatar: '/assets/images/Dianne.jpg',
-    username: 'John Doe',
+    username: 'Jenny Wilson',
     date: 'May 23, 2022',
     category: 'Business',
     tags: ['Business'],
@@ -521,7 +521,7 @@ export const POSTS: PostType[] = [
   {
     id: '48',
     urlToAvatar: '/assets/images/.jpg',
-    username: 'John Doe',
+    username: 'Dianne Russell',
     date: 'May 23, 2022',
     category: 'Technology',
     tags: ['Experience'],
