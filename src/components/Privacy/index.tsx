@@ -1,31 +1,28 @@
-import React, { FC } from 'react';
+import React from 'react';
+import { useTranslation } from 'next-i18next';
+
 import { sen } from '@/styles/fonts';
-import { PrivacyType } from '@/types/types';
 
 import styles from './styled.module.scss';
 
-interface PrivacyProps {
-  privacy: PrivacyType;
-}
-
-const Privacy: FC<PrivacyProps> = ({ privacy }) => {
-  const { lastUpdated, content } = privacy;
+const Privacy = () => {
+  const { t } = useTranslation('privacy');
 
   return (
     <>
       <section className={styles.heading}>
-        <h1 className={sen.className}>Privacy Policy</h1>
-        <p>Last Updated on {lastUpdated}</p>
+        <h1 className={sen.className}>{t('heading.title')}</h1>
+        <p>
+          {t('heading.description.updated')} {t('heading.description.date')}
+        </p>
       </section>
       <section className={styles.content__wrapper}>
         <h2 className={`${styles.content__heading} ${sen.className}`}>
-          Lorem ipsum dolor sit amet
+          {t('privacy.first-paragraph.title')}
         </h2>
-        <p className="body-s">{content}</p>
-        <h2 className={sen.className}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-        </h2>
-        <p className="body-s">{content}</p>
+        <p className="body-s">{t('privacy.first-paragraph.body')}</p>
+        <h2 className={sen.className}>{t('privacy.second-paragraph.title')}</h2>
+        <p className="body-s">{t('privacy.second-paragraph.body')}</p>
       </section>
     </>
   );

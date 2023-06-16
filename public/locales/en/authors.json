@@ -1,0 +1,9 @@
+{
+  "heading": "List of Authors",
+  "occupation": "Content Writer",
+  "company": "Company",
+  "page": {
+    "greeting": "Hey there, I’m {{name}} and welcome to my Blog",
+    "title": "My Posts"
+  }
+}

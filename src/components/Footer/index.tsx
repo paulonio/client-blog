@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { useTranslation } from 'next-i18next';
 
 import Button from '@/components/Button';
 import Navigation from '@/components/Navigation';
@@ -26,6 +27,7 @@ const schema = yup.object({
 });
 
 const Footer = () => {
+  const { t } = useTranslation('footer');
   const { register, handleSubmit, reset } = useForm<FooterFormProps>({
     resolver: yupResolver(schema),
   });
@@ -44,22 +46,22 @@ const Footer = () => {
           <Navigation links={FOOTER_ROUTES} />
         </div>
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-          <h2 className={styles.form__title}>
-            Subscribe to our news letter to get latest updates and news
-          </h2>
+          <h2 className={styles.form__title}>{t('title')}</h2>
           <div className={styles.form__fields}>
             <input
               className={`${styles.form__input} ${inter.className}`}
               type="email"
-              placeholder="Enter Your Email"
+              placeholder={`${t('email')} Email`}
               {...register('email')}
             />
-            <Button type="submit">Subscribe</Button>
+            <Button type="submit">{t('subscribe')}</Button>
           </div>
         </form>
         <div className={styles.contact}>
           <div>
-            <p className={styles.contact__info}>Finstreet 118 2561 Fintown</p>
+            <p className={styles.contact__info}>
+              {t('street')} 118 2561 {t('town')}
+            </p>
             <p className={styles.contact__info}>Hello@finsweet.com 020 7993 2905</p>
           </div>
           <Socials theme="light" />

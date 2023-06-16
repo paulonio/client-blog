@@ -2,14 +2,16 @@
 
 import React, { FC, useRef } from 'react';
 import Link from 'next/link';
-import { sen } from '@/styles/fonts';
-import { Author } from '@/types/types';
+import { useTranslation } from 'next-i18next';
 
 import Socials from '@/components/Socials';
 
-import styles from './styled.module.scss';
-import { parseString } from '@/utils/utils';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+import { parseString, stringToKey } from '@/utils/utils';
+import { Author } from '@/types/types';
+
+import { sen } from '@/styles/fonts';
+import styles from './styled.module.scss';
 
 interface AuthorsProps {
   authors: Author[];
@@ -18,14 +20,15 @@ interface AuthorsProps {
 const Authors: FC<AuthorsProps> = ({ authors }) => {
   const ref = useRef<HTMLElement | null>(null);
   const isIntersecting = useIntersectionObserver(ref);
+  const { t } = useTranslation(['authors', 'common']);
 
   return (
     <section ref={ref} className={styles.authors}>
       {isIntersecting && (
         <>
-          <h2 className={sen.className}>List of Authors</h2>
+          <h2 className={sen.className}>{t('heading')}</h2>
           <div className={styles.authors__content}>
-            {authors.map(({ fullName, occupation, company, urlToAvatar }) => {
+            {authors.map(({ fullName, urlToAvatar }) => {
               const path = parseString(fullName);
               return (
                 <Link key={fullName} className={styles.author} href={`/about/${path}`}>
@@ -33,9 +36,9 @@ const Authors: FC<AuthorsProps> = ({ authors }) => {
                     <img src={urlToAvatar} alt={fullName} />
                   </div>
                   <div className={styles.author__bio}>
-                    <h3 className={sen.className}>{fullName}</h3>
+                    <h3 className={sen.className}>{t(stringToKey(fullName), { ns: 'common' })}</h3>
                     <p className="body-l">
-                      {occupation} @{company}
+                      {t('occupation')} @{t('company')}
                     </p>
                   </div>
                   <Socials theme="dark" />

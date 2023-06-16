@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { useTranslation } from 'next-i18next';
 
 import Button from '@/components/Button';
 import SelectArrowIcon from '@/icons/SelectArrowIcon';
@@ -15,6 +16,7 @@ import { NAME_REGEXP, EMAIL_REGEXP } from '@/constants/contact';
 import { inter } from '@/styles/fonts';
 
 import styles from './styles.module.scss';
+import { stringToKey } from '@/utils/utils';
 
 interface FormType {
   fullName: string;
@@ -36,6 +38,7 @@ const schema = yup.object({
 });
 
 const ContactForm = () => {
+  const { t } = useTranslation(['contact', 'common']);
   const {
     register,
     handleSubmit,
@@ -54,14 +57,14 @@ const ContactForm = () => {
       <input
         className={`${styles.input} ${inter.className}`}
         type="text"
-        placeholder="Full Name"
+        placeholder={t('form.name')}
         {...register('fullName')}
       />
       <p className={styles.form__error}>{errors.fullName?.message}</p>
       <input
         className={`${styles.input} ${inter.className}`}
         type="text"
-        placeholder="Your Email"
+        placeholder="Email"
         {...register('email')}
       />
       <p className={styles.form__error}>{errors.email?.message}</p>
@@ -72,11 +75,11 @@ const ContactForm = () => {
           {...register('topic')}
         >
           <option disabled value="topic">
-            Topic
+            {t('form.topic')}
           </option>
           {CATEGORIES.map((category) => (
             <option key={category} className={inter.className} value={category}>
-              {category}
+              {t(stringToKey(category), { ns: 'common' })}
             </option>
           ))}
         </select>
@@ -85,11 +88,11 @@ const ContactForm = () => {
       <p className={styles.form__error}>{errors.topic?.message}</p>
       <textarea
         className={`${styles.textarea} ${inter.className}`}
-        placeholder="Message"
+        placeholder={t('form.message')}
         {...register('message')}
       />
       <p className={styles.form__error}>{errors.message?.message}</p>
-      <Button type="submit">Send Message</Button>
+      <Button type="submit">{t('form.send')}</Button>
     </form>
   );
 };

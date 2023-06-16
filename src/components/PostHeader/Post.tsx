@@ -1,15 +1,19 @@
 import React, { FC } from 'react';
 import Link from 'next/link';
-import { PostType } from '@/types/types';
+import { useTranslation } from 'next-i18next';
+
+import type { PostType } from '@/types/types';
+import { sen } from '@/styles/fonts';
 
 import styles from './styled.module.scss';
-import { sen } from '@/styles/fonts';
+import { stringToKey } from '@/utils/utils';
 
 interface PostProps {
   post: PostType;
 }
 
 const Post: FC<PostProps> = ({ post }) => {
+  const { t } = useTranslation(['blog', 'common']);
   const { id, username, date, title, body, urlToImage } = post;
 
   return (
@@ -19,10 +23,12 @@ const Post: FC<PostProps> = ({ post }) => {
       </div>
       <div className={styles.post__content}>
         <p className="body-l">
-          By <span className={styles.username}>{username}</span> | {date}
+          {t('by', { ns: 'common' })}{' '}
+          <span className={styles.username}>{t(stringToKey(username), { ns: 'common' })}</span> |{' '}
+          {t(stringToKey(date), { ns: 'common' })}
         </p>
-        <h3 className={sen.className}>{title}</h3>
-        <p className="body-s">{body}</p>
+        <h3 className={sen.className}>{t(stringToKey(title))}</h3>
+        <p className="body-s">{t(stringToKey(body))}</p>
       </div>
     </Link>
   );

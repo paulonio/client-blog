@@ -1,19 +1,24 @@
 import React, { FC } from 'react';
+import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
+
 import Post from '@/components/Post';
 
-import styles from './styled.module.scss';
 import { PostType } from '@/types/types';
+
+import styles from './styled.module.scss';
 
 interface PostsProps {
   posts: PostType[];
 }
 
 const Posts: FC<PostsProps> = ({ posts }) => {
+  const { t } = useTranslation('blog');
+
   if (!posts.length) {
     return (
       <div className={styles.posts__wrapper}>
-        <h2 className={styles.message}>No result</h2>
+        <h2 className={styles.message}>{t('no-result')}</h2>
       </div>
     );
   }

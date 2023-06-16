@@ -1,6 +1,7 @@
 'use client';
 
 import React, { FC, SVGProps, useRef } from 'react';
+import { useTranslation } from 'next-i18next';
 
 import { sen } from '@/styles/fonts';
 
@@ -14,14 +15,15 @@ interface LogosProps {
 const Logos: FC<LogosProps> = ({ logos }) => {
   const ref = useRef<HTMLElement | null>(null);
   const isIntersecting = useIntersectionObserver(ref);
+  const { t } = useTranslation('logos');
 
   return (
     <section ref={ref} className={styles.logos}>
       {isIntersecting && (
         <>
           <div>
-            <p className={`${styles.subtitle} body-l`}>We are</p>
-            <h4 className={`${sen.className} ${styles.title}`}>Featured in</h4>
+            <p className={`${styles.subtitle} body-l`}>{t('heading')}</p>
+            <h4 className={`${sen.className} ${styles.title}`}>{t('title')}</h4>
           </div>
           {logos.map((Icon) => (
             <Icon key={`${Icon}`} className={styles.icon} />

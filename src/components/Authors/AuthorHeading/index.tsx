@@ -1,15 +1,20 @@
 import React, { FC } from 'react';
-import Socials from '@/components/Socials';
-import { Author } from '@/types/types';
-import { sen } from '@/styles/fonts';
+import { useTranslation } from 'next-i18next';
 
+import Socials from '@/components/Socials';
+
+import { Author } from '@/types/types';
+
+import { sen } from '@/styles/fonts';
 import styles from './styled.module.scss';
+import { stringToKey } from '@/utils/utils';
 
 interface AuthorsHeadingProps {
   author: Author;
 }
 
 const AuthorsHeading: FC<AuthorsHeadingProps> = ({ author }) => {
+  const { t } = useTranslation(['authors', 'blog', 'common']);
   const { fullName, urlToAvatar, bio } = author;
 
   return (
@@ -20,9 +25,9 @@ const AuthorsHeading: FC<AuthorsHeadingProps> = ({ author }) => {
         </div>
         <div className={styles.heading__wrapper}>
           <h1 className={`${styles.title} ${sen.className}`}>
-            Hey there, I’m {fullName} and welcome to my Blog
+            {t('page.greeting', { name: t(stringToKey(fullName), { ns: 'common' }) })}
           </h1>
-          <p className="body-s">{bio}</p>
+          <p className="body-s">{t(stringToKey(bio), { ns: 'blog' })}</p>
           <Socials theme="dark" />
         </div>
       </div>

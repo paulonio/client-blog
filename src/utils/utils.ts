@@ -7,7 +7,15 @@ export const parseString = (capitalized: string) => {
   return capitalized.toLocaleLowerCase().split(' ').join('-');
 };
 
-export const getPost = (id: string) => {
+export const stringToKey = (string: string) => {
+  return string.toLocaleLowerCase().split(' ').slice(0, 2).join('-');
+};
+
+export const getPost = (id?: string | string[]) => {
+  if (!id || Array.isArray(id)) {
+    return null;
+  }
+
   const [currentPost] = POSTS.filter((post) => post.id === id);
 
   return currentPost;
@@ -51,13 +59,21 @@ export const getPostsByPage = (posts: PostType[], page: number) => {
   return newPosts;
 };
 
-export const getCurrentAuthor = (author: string) => {
+export const getCurrentAuthor = (author?: string | string[]) => {
+  if (!author || Array.isArray(author)) {
+    return null;
+  }
+
   const [filteredAuthor] = AUTHORS.filter(({ fullName }) => parseString(fullName) === author);
 
   return filteredAuthor;
 };
 
-export const getAuthorsPosts = (author: string) => {
+export const getAuthorsPosts = (author?: string | string[]) => {
+  if (!author || Array.isArray(author)) {
+    return null;
+  }
+
   const authorsPosts = POSTS.filter(({ username }) => parseString(username) === author);
 
   return authorsPosts;

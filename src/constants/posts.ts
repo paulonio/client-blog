@@ -26,7 +26,7 @@ export const POSTS: PostType[] = [
   {
     id: '3',
     urlToAvatar: '/assets/images/Jenny.jpg',
-    username: 'Leslie Alexandere',
+    username: 'Leslie Alexander',
     date: 'Sep 23, 2022',
     category: 'Startup',
     tags: ['Screen'],

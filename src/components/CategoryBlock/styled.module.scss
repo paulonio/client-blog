@@ -14,6 +14,12 @@
     justify-content: space-between;
     gap: 32px;
 
+    @media screen and (max-width: 900px) {  
+      flex-flow: row wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+
     &.controls {
       width: 100%;
       max-width: 296px;
@@ -25,18 +31,6 @@
       & a {
         width: 100%;
       }
-    }
-
-    & a {
-      width: fit-content;
-    }
-  }
-
-  &__wrapper {
-    @media screen and (max-width: 900px) {  
-      flex-flow: row wrap;
-      justify-content: center;
-      gap: 24px;
     }
   }
 }

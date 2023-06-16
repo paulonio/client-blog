@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { useTranslation } from 'next-i18next';
 
 import Posts from './Posts';
 
@@ -13,10 +14,11 @@ import styles from './styled.module.scss';
 const BlogPosts = () => {
   const { posts, isPrevDisabled, isNextDisabled, handleNextClick, handlePrevClick } =
     usePagination();
+  const { t } = useTranslation('blog');
 
   return (
     <section className={styles.posts}>
-      <h1 className={`${sen.className} ${styles.posts__title}`}>All posts</h1>
+      <h1 className={`${sen.className} ${styles.posts__title}`}>{t('posts')}</h1>
       <Posts posts={posts} />
       <div className={styles.buttons}>
         <button
@@ -25,7 +27,7 @@ const BlogPosts = () => {
           className={styles.button}
           onClick={handlePrevClick}
         >
-          {'<'} Prev{' '}
+          {'<'} {t('prev')}{' '}
         </button>
         <button
           type="button"
@@ -33,7 +35,7 @@ const BlogPosts = () => {
           className={styles.button}
           onClick={handleNextClick}
         >
-          Next {'>'}
+          {t('next')} {'>'}
         </button>
       </div>
     </section>

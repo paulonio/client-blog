@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 
 import Button from '@/components/Button';
 
@@ -13,18 +14,16 @@ import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 const Join = () => {
   const ref = useRef<HTMLElement | null>(null);
   const isIntersecting = useIntersectionObserver(ref);
+  const { t } = useTranslation('testimonials');
 
   return (
     <section ref={ref} className={styles.join}>
       {isIntersecting && (
         <div className={styles.wrapper}>
-          <h2 className={sen.className}>Join our team to be a part of our story</h2>
-          <p className="body-s">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt.
-          </p>
+          <h2 className={sen.className}>{t('join-title')}</h2>
+          <p className="body-s">{t('join-body')}</p>
           <Link href="/contact">
-            <Button>Join Now</Button>
+            <Button>{t('join')}</Button>
           </Link>
         </div>
       )}

@@ -1,6 +1,6 @@
 import React, { FC, ReactNode, HTMLAttributes } from 'react';
 
-import '../../app/globals.scss';
+// import '../../pages/globals.scss';
 import styles from './styled.module.scss';
 
 type ButtonProps = {

@@ -1,11 +1,12 @@
 import React, { FC } from 'react';
-
+import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
+
 import { Category } from '@/types/types';
 import { sen } from '@/styles/fonts';
 
+import { parseString, stringToKey } from '@/utils/utils';
 import styles from './styled.module.scss';
-import { parseString } from '@/utils/utils';
 
 interface CategoriesProps {
   categories: Category[];
@@ -14,6 +15,8 @@ interface CategoriesProps {
 }
 
 const Categories: FC<CategoriesProps> = ({ categories, type, currentCategory }) => {
+  const { t } = useTranslation(['category', 'common']);
+
   return (
     <div className={`${styles.categories__wrapper} ${styles[type]}`}>
       {categories.map(({ title, description, Icon }) => {
@@ -25,8 +28,8 @@ const Categories: FC<CategoriesProps> = ({ categories, type, currentCategory }) 
               <div className={`${styles.icon__wrapper} ${styles[type]}`}>
                 <Icon />
               </div>
-              <h3 className={sen.className}>{title}</h3>
-              {!category && <p className="body-s">{description}</p>}
+              <h3 className={sen.className}>{t(stringToKey(title), { ns: 'common' })}</h3>
+              {!category && <p className="body-s">{t(stringToKey(description))}</p>}
             </div>
           </Link>
         );

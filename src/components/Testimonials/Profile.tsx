@@ -1,7 +1,10 @@
 import React, { FC } from 'react';
+import { useTranslation } from 'next-i18next';
+
+import type { User } from '@/types/types';
 
 import styles from './styled.module.scss';
-import type { User } from '@/types/types';
+import { stringToKey } from '@/utils/utils';
 
 interface ProfileProps {
   profile: User;
@@ -9,6 +12,7 @@ interface ProfileProps {
 
 const Profile: FC<ProfileProps> = ({ profile }) => {
   const { fullName, urlToAvatar, city, country } = profile;
+  const { t } = useTranslation('common');
 
   return (
     <div className={styles.profile}>
@@ -16,9 +20,9 @@ const Profile: FC<ProfileProps> = ({ profile }) => {
         <img src={urlToAvatar} alt={fullName} />
       </div>
       <div>
-        <h4>{fullName}</h4>
+        <h4>{t(stringToKey(fullName))}</h4>
         <p className="body-s">
-          {city}, {country}
+          {t(stringToKey(city))}, {t(stringToKey(country))}
         </p>
       </div>
     </div>

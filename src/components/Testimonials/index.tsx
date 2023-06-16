@@ -1,13 +1,17 @@
 'use client';
 
 import React, { FC, useRef, useState } from 'react';
-import { Testimonial } from '@/types/types';
+import { useTranslation } from 'next-i18next';
+
 import Heading from './Heading';
+import Profile from './Profile';
 import ArrowIcon from '@/icons/ArrowIcon';
 
-import styles from './styled.module.scss';
-import Profile from './Profile';
+import { Testimonial } from '@/types/types';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+import { stringToKey } from '@/utils/utils';
+
+import styles from './styled.module.scss';
 
 interface TestimonialsProps {
   testimonials: Testimonial[];
@@ -18,6 +22,7 @@ const Testimonials: FC<TestimonialsProps> = ({ testimonials }) => {
   const lastIndex = testimonials.length - 1;
   const ref = useRef<HTMLElement | null>(null);
   const isIntersecting = useIntersectionObserver(ref);
+  const { t } = useTranslation('testimonials');
 
   const handleIncrement = () => {
     if (index !== lastIndex) {
@@ -41,7 +46,7 @@ const Testimonials: FC<TestimonialsProps> = ({ testimonials }) => {
               {testimonials.map(({ profile, message }) => {
                 return (
                   <div key={profile.fullName} className={styles.slide}>
-                    <h4>{message}</h4>
+                    <h4>{t(stringToKey(message))}</h4>
                     <div className={styles.testimonial__footer}>
                       <Profile profile={profile} />
                       <div className={styles.buttons}>
