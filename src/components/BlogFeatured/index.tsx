@@ -26,8 +26,8 @@ const BlogFeatured = () => {
               {t(stringToKey(title))}
             </h2>
             <p className="body-l">
-              <span className={styles.name}>{t('heading.author')}</span> |{' '}
-              {t(stringToKey(date), { ns: 'common' })}
+              {t('by', { ns: 'common' })} <span className={styles.name}>{t('heading.author')}</span>{' '}
+              | {t(stringToKey(date), { ns: 'common' })}
             </p>
             <p className="body-s">{t(stringToKey(body))}</p>
             <Link href={`/blog/${id}`}>

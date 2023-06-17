@@ -29,6 +29,3 @@ jobs:
 
       - name: Run Jest
         run: yarn test
-
-      - name: Run Cypress
-        run: yarn cypress

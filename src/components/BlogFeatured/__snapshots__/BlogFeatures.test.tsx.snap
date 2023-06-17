@@ -26,13 +26,15 @@ exports[`Blog featured should render blog featured component 1`] = `
           <p
             class="body-l"
           >
+            by
+             
             <span
               class="name"
             >
               heading.author
             </span>
-             |
              
+            | 
             aug-23,
           </p>
           <p
