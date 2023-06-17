@@ -7,6 +7,7 @@ import type { GetServerSideProps } from 'next';
 
 import AuthorsHeading from '@/components/Authors/AuthorHeading';
 import AuthorPosts from '@/components/Authors/AuthorPosts';
+import ErrorBoundary from '@/components/ErrorBoundary';
 
 import { getAuthorsPosts, getCurrentAuthor } from '@/utils/utils';
 
@@ -16,11 +17,11 @@ const AuthorPage = () => {
   const authorsPosts = useMemo(() => getAuthorsPosts(author), [author]);
 
   return (
-    <>
+    <ErrorBoundary>
       {currentAuthor && <AuthorsHeading author={currentAuthor} />}
       {authorsPosts && <AuthorPosts posts={authorsPosts} />}
       <div className="container" />
-    </>
+    </ErrorBoundary>
   );
 };
 

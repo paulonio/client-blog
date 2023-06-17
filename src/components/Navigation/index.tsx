@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import Link from 'next/link';
-import { useTranslation, Trans } from 'next-i18next';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
 import { parseString } from '@/utils/utils';
 import { inter } from '@/styles/fonts';
@@ -19,18 +20,24 @@ interface NavigationProps {
 
 const Navigation: FC<NavigationProps> = ({ links, onClick }) => {
   const { t } = useTranslation('header');
+  const router = useRouter();
+
+  const changeTo = router.locale === 'en' ? 'ru' : 'en';
 
   return (
     <ul className={styles.navigation}>
       {links.map(({ href, text }) => (
         <li key={href} className={`${styles.navigation__link} ${inter.className}`}>
-          <Trans i18nKey="nav">
-            <Link href={href} onClick={onClick}>
-              {t(parseString(text))}
-            </Link>
-          </Trans>
+          <Link href={href} onClick={onClick}>
+            {t(parseString(text))}
+          </Link>
         </li>
       ))}
+      <li className={`${styles.navigation__link} ${inter.className}`}>
+        <Link href="/" locale={changeTo}>
+          {t('change', { changeTo })}
+        </Link>
+      </li>
     </ul>
   );
 };

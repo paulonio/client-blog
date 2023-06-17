@@ -5,5 +5,4 @@ module.exports = {
     locales: ['en', 'ru'],
   },
   defaultNS: 'common',
-  reloadOnPrerender: true,
 };

@@ -1,6 +1,9 @@
 @import '../../styles/sass/constants';
 
 .posts {
+  display: flex;
+  flex-direction: column;
+
   & h1 {
     margin: 64px 0;
     height: 96px;

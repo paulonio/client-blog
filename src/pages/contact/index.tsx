@@ -3,9 +3,14 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import type { GetServerSideProps } from 'next';
 
 import Contact from '@/components/Contact';
+import ErrorBoundary from '@/components/ErrorBoundary';
 
 const ContactPage = () => {
-  return <Contact />;
+  return (
+    <ErrorBoundary>
+      <Contact />
+    </ErrorBoundary>
+  );
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ locale }) => ({

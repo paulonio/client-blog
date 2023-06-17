@@ -6,17 +6,18 @@ import BlogFeatured from '@/components/BlogFeatured';
 import BlogPosts from '@/components/BlogPosts';
 import BlogCategories from '@/components/BlogCategories';
 import Join from '@/components/Join';
+import ErrorBoundary from '@/components/ErrorBoundary';
 
 const Blog = () => {
   return (
-    <>
+    <ErrorBoundary>
       <BlogFeatured />
       <article className="container">
         <BlogPosts />
         <BlogCategories />
         <Join />
       </article>
-    </>
+    </ErrorBoundary>
   );
 };
 

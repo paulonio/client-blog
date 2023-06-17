@@ -9,15 +9,15 @@ import { sen } from '@/styles/fonts';
 import { PostType } from '@/types/types';
 
 import styles from './styled.module.scss';
+import { stringToKey } from '@/utils/utils';
 
 interface HeroProps {
   post: PostType;
 }
 
 const Hero: FC<HeroProps> = ({ post }) => {
-  const { id } = post;
-
-  const { t } = useTranslation('hero');
+  const { id, username } = post;
+  const { t } = useTranslation(['hero', 'common']);
 
   return (
     <section className={styles.hero}>
@@ -29,7 +29,11 @@ const Hero: FC<HeroProps> = ({ post }) => {
           <h2 className={`${styles.title} ${sen.className}`}>{t('title')}</h2>
           <div className={styles.description__wrapper}>
             <p className={styles.description}>
-              <span className={styles.description__name}>{t('author')}</span> | {t('date')}
+              {t('by', { ns: 'common' })}{' '}
+              <span className={styles.description__name}>
+                {t(stringToKey(username), { ns: 'common' })}
+              </span>{' '}
+              | {t('date')}
             </p>
             <p className={styles.description}>{t('body')}</p>
           </div>

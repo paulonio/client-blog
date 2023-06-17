@@ -5,6 +5,7 @@ import { GetServerSideProps } from 'next';
 
 import Category from '@/components/Category';
 import CategoryControls from '@/components/Category/CategoryControls';
+import ErrorBoundary from '@/components/ErrorBoundary';
 
 const CategoryPage = () => {
   const { category } = useRouter().query;
@@ -13,12 +14,12 @@ const CategoryPage = () => {
   }
 
   return (
-    <>
+    <ErrorBoundary>
       <Category category={category} />
       <div className="container">
         <CategoryControls currentCategory={category} />
       </div>
-    </>
+    </ErrorBoundary>
   );
 };
 

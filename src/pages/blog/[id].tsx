@@ -8,30 +8,30 @@ import PostImage from '@/components/PostHeader/PostImage';
 import PostContent from '@/components/PostHeader/PostContent';
 import OtherPosts from '@/components/PostHeader/OtherPosts';
 import Join from '@/components/Join';
+import ErrorBoundary from '@/components/ErrorBoundary';
 
-import { POSTS } from '@/constants/posts';
-
-import { getPost } from '@/utils/utils';
-
-const posts = POSTS.slice(0, 3);
+import { getNextPosts, getPost } from '@/utils/utils';
 
 const BlogPost = () => {
   const router = useRouter();
   const { id } = router.query;
   const post = useMemo(() => getPost(id), [id]);
+  const posts = useMemo(() => getNextPosts(id), [id]);
 
   return (
-    <>
-      {post && (
-        <>
-          <PostHeader post={post} />
-          <PostImage urlToImage={post.urlToImage} tag={post.category} />
-        </>
-      )}
-      <PostContent />
-      <OtherPosts posts={posts} />
-      <Join />
-    </>
+    <ErrorBoundary>
+      <main className="container">
+        {post && (
+          <>
+            <PostHeader post={post} />
+            <PostImage urlToImage={post.urlToImage} tag={post.category} />
+          </>
+        )}
+        <PostContent />
+        {posts && <OtherPosts posts={posts} />}
+        <Join />
+      </main>
+    </ErrorBoundary>
   );
 };
 

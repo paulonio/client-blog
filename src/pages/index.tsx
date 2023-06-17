@@ -13,6 +13,7 @@ import Authors from '@/components/Authors';
 import Logos from '@/components/Logos';
 import Testimonials from '@/components/Testimonials';
 import Join from '@/components/Join';
+import ErrorBoundary from '@/components/ErrorBoundary';
 
 import { SPECIAL_POST } from '@/constants/constants';
 import { AUTHORS } from '@/constants/authors';
@@ -27,7 +28,7 @@ const Home = () => {
   const heroPost = getHeroPost();
 
   return (
-    <>
+    <ErrorBoundary>
       <Hero post={heroPost} />
       <div className="container">
         <Featured />
@@ -39,7 +40,7 @@ const Home = () => {
         <Testimonials testimonials={TESTIMONIALS} />
         <Join />
       </div>
-    </>
+    </ErrorBoundary>
   );
 };
 

@@ -23,7 +23,7 @@ const PostHeader: FC<PostHeaderProps> = ({ post }) => {
         <div>
           <h4 className={styles.username}>{t(stringToKey(username))}</h4>
           <p className="body-s">
-            {t('posted-on')} {t(stringToKey(date))}
+            {t('posted-on', { ns: 'blog' })} {t(stringToKey(date))}
           </p>
         </div>
       </div>

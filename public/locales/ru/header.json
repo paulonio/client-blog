@@ -5,6 +5,6 @@
   "about-us": "О нас",
   "contact-us": "Контакты",
   "privacy-policy": "Приватность",
-  "change": "Сменить на",
+  "change": "{{changeTo}}",
   "video": "Видео о нас"
 }

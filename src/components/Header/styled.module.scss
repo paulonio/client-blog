@@ -32,25 +32,3 @@
     gap: 16px;
   }
 }
-
-.navigation {
-  display: flex;
-  align-items: center;
-
-  &__link {
-    list-style: none;
-    &:first-child {
-      margin-left: 0;
-    }
-
-    & a {
-      font-size: 16px;
-      line-height: 28px;
-      font-weight: 400;
-      transition: 0.3s;
-      &:hover {
-        color: $color-primary-hover;
-      }
-    }
-  }
-}

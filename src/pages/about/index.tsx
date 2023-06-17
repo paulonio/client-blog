@@ -7,22 +7,24 @@ import AboutMission from '@/components/About/AboutMission';
 import AboutTeam from '@/components/About/AboutTeam';
 import AboutProject from '@/components/About/AboutProject';
 import Authors from '@/components/Authors';
+import ErrorBoundary from '@/components/ErrorBoundary';
 import Join from '@/components/Join';
 
 import { AUTHORS } from '@/constants/authors';
 import { ABOUT_INFO, ABOUT_PROJECT, ABOUT_TEAM } from '@/constants/about-us';
-import { ABOUT_US } from '@/constants/constants';
 
 const AboutPage = () => {
   return (
-    <>
-      <About heading={ABOUT_US} info={ABOUT_INFO} />
-      <AboutMission />
-      <AboutTeam content={ABOUT_TEAM} />
-      <AboutProject content={ABOUT_PROJECT} />
-      <Authors authors={AUTHORS} />
-      <Join />
-    </>
+    <ErrorBoundary>
+      <main className="container">
+        <About info={ABOUT_INFO} />
+        <AboutMission />
+        <AboutTeam content={ABOUT_TEAM} />
+        <AboutProject content={ABOUT_PROJECT} />
+        <Authors authors={AUTHORS} />
+        <Join />
+      </main>
+    </ErrorBoundary>
   );
 };
 

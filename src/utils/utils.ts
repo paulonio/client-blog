@@ -21,6 +21,17 @@ export const getPost = (id?: string | string[]) => {
   return currentPost;
 };
 
+export const getNextPosts = (id?: string | string[]) => {
+  const author = getPost(id);
+
+  if (!id || Array.isArray(id) || !author) {
+    return null;
+  }
+
+  const posts = POSTS.filter(({ username }) => username === author.username);
+  return posts.slice(0, 3);
+};
+
 export const getResults = (searchValue: string) => {
   const result = CATEGORY_TAGS.filter((tag) =>
     tag.toLowerCase().includes(searchValue.toLowerCase())

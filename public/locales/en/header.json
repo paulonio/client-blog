@@ -5,6 +5,6 @@
   "about-us": "About us",
   "contact-us": "Contact us",
   "privacy-policy": "Privacy policy",
-  "change": "Change locale to \"{{changeTo}}\"",
+  "change": "{{changeTo}}",
   "video": "Video about us"
 }
