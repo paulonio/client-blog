@@ -15,7 +15,6 @@ import Testimonials from '@/components/Testimonials';
 import Join from '@/components/Join';
 import ErrorBoundary from '@/components/ErrorBoundary';
 
-import { SPECIAL_POST } from '@/constants/constants';
 import { AUTHORS } from '@/constants/authors';
 import { LOGOS } from '@/constants/logos';
 import { TESTIMONIALS } from '@/constants/testimonials';
@@ -34,7 +33,7 @@ const Home = () => {
         <Featured />
         <AboutUs />
         <CategoryBlock />
-        <Special post={SPECIAL_POST} />
+        <Special />
         <Authors authors={authors} />
         <Logos logos={LOGOS} />
         <Testimonials testimonials={TESTIMONIALS} />

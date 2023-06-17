@@ -1,22 +1,16 @@
 'use client';
 
-import React, { FC, useRef } from 'react';
+import React, { useRef } from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 
 import Button from '../Button';
-import { AboutType } from '@/types/types';
 import { sen } from '@/styles/fonts';
 
 import styles from './styled.module.scss';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
-interface SpecialProps {
-  post: AboutType;
-}
-
-const Special: FC<SpecialProps> = ({ post }) => {
-  const { title, body } = post;
+const Special = () => {
   const ref = useRef<HTMLElement | null>(null);
   const isIntersecting = useIntersectionObserver(ref);
   const { t } = useTranslation('special');
