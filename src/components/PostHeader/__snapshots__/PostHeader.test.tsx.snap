@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Post header should render post header 1`] = `
+<div>
+  <section
+    class="post__title"
+  >
+    <div
+      class="profile"
+    >
+      <div
+        class="avatar"
+      >
+        <img
+          alt="test"
+          src="test"
+        />
+      </div>
+      <div>
+        <h4
+          class="username"
+        >
+          test
+        </h4>
+        <p
+          class="body-s"
+        >
+          posted-on
+           
+          test
+        </p>
+      </div>
+    </div>
+    <h1
+      class="title"
+    >
+      test
+    </h1>
+    <h4
+      class="className"
+    >
+      test
+    </h4>
+  </section>
+</div>
+`;

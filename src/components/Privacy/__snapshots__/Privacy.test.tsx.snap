@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Privacy should render prviacy 1`] = `
+<div>
+  <section
+    class="heading"
+  >
+    <h1
+      class="className"
+      data-testid="privacy-title"
+    >
+      heading.title
+    </h1>
+    <p
+      data-testid="body"
+    >
+      heading.description.updated
+       
+      heading.description.date
+    </p>
+  </section>
+  <section
+    class="content__wrapper"
+  >
+    <h2
+      class="content__heading className"
+    >
+      privacy.first-paragraph.title
+    </h2>
+    <p
+      class="body-s"
+    >
+      privacy.first-paragraph.body
+    </p>
+    <h2
+      class="className"
+    >
+      privacy.second-paragraph.title
+    </h2>
+    <p
+      class="body-s"
+    >
+      privacy.second-paragraph.body
+    </p>
+  </section>
+</div>
+`;

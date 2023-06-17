@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryBlock should render category block 1`] = `
+<div>
+  <section
+    class="categories"
+  />
+</div>
+`;

@@ -19,7 +19,7 @@ const About: FC<AboutProps> = ({ info }) => {
       <div className={styles.heading}>
         <div className={styles.about__title}>
           <h5>{t('header')}</h5>
-          <h1>{t('title')}</h1>
+          <h1 data-testid="about-title">{t('title')}</h1>
         </div>
         <p className={`${styles.about__description} body-s`}>
           {t('body')} {t('second-part')}

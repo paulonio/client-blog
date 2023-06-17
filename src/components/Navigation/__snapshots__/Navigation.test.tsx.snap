@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation should render navigation 1`] = `
+<div>
+  <ul
+    class="navigation"
+  >
+    <li
+      class="navigation__link className"
+    >
+      <a
+        href="/test"
+      >
+        test
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Navigation should render with empty array 1`] = `
+<div>
+  <ul
+    class="navigation"
+  />
+</div>
+`;

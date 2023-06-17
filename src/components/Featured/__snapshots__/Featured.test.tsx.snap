@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Featured should render all posts component 1`] = `
+<div>
+  <div
+    class="posts"
+  >
+    <div
+      class="posts__header"
+    >
+      <h2
+        class="className"
+      >
+        all
+      </h2>
+      <a
+        href="/blog"
+      >
+        <button
+          class="body-s link__button"
+          type="button"
+        >
+          view
+        </button>
+      </a>
+    </div>
+    <div
+      class="posts__wrapper"
+    >
+      <div
+        class="post__container"
+      >
+        <p
+          class="body-l"
+        >
+          by
+           
+          <span
+            class="name"
+          >
+            test
+          </span>
+           
+          | 
+          test
+        </p>
+        <h4
+          class="className"
+        >
+          test
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Featured should render featured component 1`] = `
+<div>
+  <section
+    class="featured"
+  />
+</div>
+`;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Special should render special 1`] = `
+<div>
+  <section
+    class="testimonial"
+  />
+</div>
+`;

@@ -16,7 +16,9 @@ const Category: FC<CategoryProps> = ({ category }) => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.heading}>
-        <h1 className={`${sen.className} display`}>{t(stringToKey(category), { ns: 'common' })}</h1>
+        <h1 className={`${sen.className} display`} data-testid="category">
+          {t(stringToKey(category), { ns: 'common' })}
+        </h1>
         <p className="body-s">{t('lorem-ipsum')}</p>
         <p className={`${styles.category} body-l`}>
           {t('blog')} {'>'} {t(stringToKey(category), { ns: 'common' })}

@@ -6,7 +6,7 @@ import { PostType } from '@/types/types';
 import { sen } from '@/styles/fonts';
 
 import styles from './styled.module.scss';
-import Button from '../Button';
+import Button from '../../Button';
 import { stringToKey } from '@/utils/utils';
 
 interface AllPostsProps {

@@ -7,7 +7,7 @@ import { inter } from '@/styles/fonts';
 
 import styles from './styled.module.scss';
 
-interface LinkType {
+export interface LinkType {
   href: string;
   text: string;
 }

@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero should render hero 1`] = `
+<div>
+  <section
+    class="hero"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="content"
+      >
+        <h4
+          class="subtitle"
+        >
+          <span
+            class="subtitle__bold"
+          >
+            category
+          </span>
+        </h4>
+        <h2
+          class="title className"
+        >
+          title
+        </h2>
+        <div
+          class="description__wrapper"
+        >
+          <p
+            class="description"
+          >
+            <span
+              class="description__name"
+            >
+              author
+            </span>
+             | 
+            date
+          </p>
+          <p
+            class="description"
+          >
+            body
+          </p>
+        </div>
+        <a
+          href="/blog/test"
+        >
+          <button
+            class="button"
+            type="button"
+          >
+            read
+             
+            &gt;
+          </button>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+`;

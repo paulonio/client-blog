@@ -59,6 +59,7 @@ const ContactForm = () => {
         type="text"
         placeholder={t('form.name')}
         {...register('fullName')}
+        data-testid="name"
       />
       <p className={styles.form__error}>{errors.fullName?.message}</p>
       <input
@@ -66,6 +67,7 @@ const ContactForm = () => {
         type="text"
         placeholder="Email"
         {...register('email')}
+        data-testid="email"
       />
       <p className={styles.form__error}>{errors.email?.message}</p>
       <div className={styles.select__wrapper}>
@@ -90,6 +92,7 @@ const ContactForm = () => {
         className={`${styles.textarea} ${inter.className}`}
         placeholder={t('form.message')}
         {...register('message')}
+        data-testid="message"
       />
       <p className={styles.form__error}>{errors.message?.message}</p>
       <Button type="submit">{t('form.send')}</Button>

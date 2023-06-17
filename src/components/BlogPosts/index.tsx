@@ -18,7 +18,9 @@ const BlogPosts = () => {
 
   return (
     <section className={styles.posts}>
-      <h1 className={`${sen.className} ${styles.posts__title}`}>{t('posts')}</h1>
+      <h1 className={`${sen.className} ${styles.posts__title}`} data-testid="blog-posts-title">
+        {t('posts')}
+      </h1>
       <Posts posts={posts} />
       <div className={styles.buttons}>
         <button
@@ -26,6 +28,7 @@ const BlogPosts = () => {
           disabled={isPrevDisabled}
           className={styles.button}
           onClick={handlePrevClick}
+          data-testid="blog-posts-prev"
         >
           {'<'} {t('prev')}{' '}
         </button>
@@ -34,6 +37,7 @@ const BlogPosts = () => {
           disabled={isNextDisabled}
           className={styles.button}
           onClick={handleNextClick}
+          data-testid="blog-posts-next"
         >
           {t('next')} {'>'}
         </button>

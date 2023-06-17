@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blog featured should render blog featured component 1`] = `
+<div>
+  <section
+    class="blog"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="blog__wrapper"
+      >
+        <div
+          class="blog__featured"
+        >
+          <h5>
+            heading.subtitle
+          </h5>
+          <h2
+            class="className"
+            data-testid="blog-featured-title"
+          >
+            step-by-step-guide
+          </h2>
+          <p
+            class="body-l"
+          >
+            <span
+              class="name"
+            >
+              heading.author
+            </span>
+             |
+             
+            aug-23,
+          </p>
+          <p
+            class="body-s"
+          >
+            duis-aute
+          </p>
+          <a
+            href="/blog/2"
+          >
+            <button
+              class="button"
+              type="button"
+            >
+              heading.read
+               
+              &gt;
+            </button>
+          </a>
+        </div>
+        <div>
+          <img
+            alt="Robert Fox"
+            src="/assets/images/blog-featured.jpg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

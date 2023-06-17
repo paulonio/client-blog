@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Authors should render authors component 1`] = `
+<div>
+  <section
+    class="authors"
+  />
+</div>
+`;
+
+exports[`Authors should render with empty array 1`] = `
+<div>
+  <section
+    class="authors"
+  />
+</div>
+`;

@@ -42,6 +42,7 @@ const CategoryControls: FC<CategoryControlsProps> = ({ currentCategory }) => {
             placeholder={t('search-tag')}
             value={searchValue}
             onChange={handleSearchChange}
+            data-testid="search-input"
           />
           <button className={`${styles.button} ${sen.className}`} type="button">
             {t('search')}
@@ -56,12 +57,13 @@ const CategoryControls: FC<CategoryControlsProps> = ({ currentCategory }) => {
                     data-tag={tag}
                     onClick={handleTagClick}
                     aria-hidden
+                    data-testid="true-result"
                   >
                     {tag}
                   </div>
                 ))
               ) : (
-                <div>{t('no-result', { ns: 'blog' })}</div>
+                <div data-testid="result">{t('no-result', { ns: 'blog' })}</div>
               )}
             </div>
           )}

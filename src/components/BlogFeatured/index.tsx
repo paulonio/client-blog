@@ -22,7 +22,9 @@ const BlogFeatured = () => {
         <div className={styles.blog__wrapper}>
           <div className={styles.blog__featured}>
             <h5>{t('heading.subtitle')}</h5>
-            <h2 className={sen.className}>{t(stringToKey(title))}</h2>
+            <h2 className={sen.className} data-testid="blog-featured-title">
+              {t(stringToKey(title))}
+            </h2>
             <p className="body-l">
               <span className={styles.name}>{t('heading.author')}</span> |{' '}
               {t(stringToKey(date), { ns: 'common' })}

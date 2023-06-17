@@ -1,17 +1,10 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { useTranslation } from 'next-i18next';
-
-import { MissionType } from '@/constants/constants';
 
 import { sen } from '@/styles/fonts';
 import styles from './styled.module.scss';
 
-interface MissionProps {
-  mission: MissionType;
-}
-
-const Mission: FC<MissionProps> = ({ mission }) => {
-  const { rubric, title, body } = mission;
+const Mission = () => {
   const { t } = useTranslation('mission');
 
   return (

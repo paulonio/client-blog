@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About page should render about page 1`] = `
+<div>
+  <section
+    class="about"
+  >
+    <div
+      class="heading"
+    >
+      <div
+        class="about__title"
+      >
+        <h5>
+          header
+        </h5>
+        <h1
+          data-testid="about-title"
+        >
+          title
+        </h1>
+      </div>
+      <p
+        class="about__description body-s"
+      >
+        body
+         
+        second-part
+      </p>
+    </div>
+    <div>
+      <div
+        class="info"
+      >
+        <div
+          class="info__item"
+        >
+          <p
+            class="className display"
+          >
+            12+
+          </p>
+          <p
+            class="body-l"
+          >
+            blogs-published
+          </p>
+        </div>
+        <div
+          class="info__item"
+        >
+          <p
+            class="className display"
+          >
+            18K+
+          </p>
+          <p
+            class="body-l"
+          >
+            views-on
+          </p>
+        </div>
+        <div
+          class="info__item"
+        >
+          <p
+            class="className display"
+          >
+            30K+
+          </p>
+          <p
+            class="body-l"
+          >
+            total-active
+          </p>
+        </div>
+      </div>
+      <div
+        class="patterns__wrapper"
+      >
+        <div
+          class="pattern__left"
+        >
+          <div />
+          <div />
+        </div>
+        <div
+          class="pattern__right"
+        />
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`About page should render with empty array 1`] = `
+<div>
+  <section
+    class="about"
+  >
+    <div
+      class="heading"
+    >
+      <div
+        class="about__title"
+      >
+        <h5>
+          header
+        </h5>
+        <h1
+          data-testid="about-title"
+        >
+          title
+        </h1>
+      </div>
+      <p
+        class="about__description body-s"
+      >
+        body
+         
+        second-part
+      </p>
+    </div>
+    <div>
+      <div
+        class="info"
+      />
+      <div
+        class="patterns__wrapper"
+      >
+        <div
+          class="pattern__left"
+        >
+          <div />
+          <div />
+        </div>
+        <div
+          class="pattern__right"
+        />
+      </div>
+    </div>
+  </section>
+</div>
+`;

@@ -11,8 +11,10 @@ const Privacy = () => {
   return (
     <>
       <section className={styles.heading}>
-        <h1 className={sen.className}>{t('heading.title')}</h1>
-        <p>
+        <h1 className={sen.className} data-testid="privacy-title">
+          {t('heading.title')}
+        </h1>
+        <p data-testid="body">
           {t('heading.description.updated')} {t('heading.description.date')}
         </p>
       </section>
