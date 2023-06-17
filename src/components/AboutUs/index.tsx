@@ -12,15 +12,17 @@ import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
 import { sen } from '@/styles/fonts';
 import styles from './styled.module.scss';
+import Loader from '@/components/Loader';
 
 const AboutUs = () => {
   const ref = useRef<HTMLElement | null>(null);
-  const isIntersecting = useIntersectionObserver(ref);
+  const { isShowing, isLoading } = useIntersectionObserver(ref);
   const { t } = useTranslation('about');
 
   return (
     <section ref={ref} className={styles['about-us']}>
-      {isIntersecting && (
+      {isLoading && <Loader />}
+      {isShowing && (
         <>
           <Pattern />
           <div className={styles.about__wrapper}>

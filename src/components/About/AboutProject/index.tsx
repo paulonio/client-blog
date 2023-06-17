@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { useTranslation } from 'next-i18next';
 
-import { AboutContentType } from '@/types/types';
+import type { AboutContentType } from '@/types/types';
 import { sen } from '@/styles/fonts';
 
 import styles from './styled.module.scss';

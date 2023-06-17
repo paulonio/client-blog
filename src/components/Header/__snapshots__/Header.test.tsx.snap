@@ -24,37 +24,33 @@ exports[`Header should render header 1`] = `
               class="navigation__link className"
             >
               <a
+                class="active"
                 href="/"
-              >
-                home
-              </a>
+              />
             </li>
             <li
               class="navigation__link className"
             >
               <a
+                class="active"
                 href="/blog"
-              >
-                blog
-              </a>
+              />
             </li>
             <li
               class="navigation__link className"
             >
               <a
+                class="active"
                 href="/about"
-              >
-                about-us
-              </a>
+              />
             </li>
             <li
               class="navigation__link className"
             >
               <a
+                class="active"
                 href="/contact"
-              >
-                contact-us
-              </a>
+              />
             </li>
             <li
               class="navigation__link className"

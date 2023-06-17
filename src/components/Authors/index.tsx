@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 
 import Socials from '@/components/Socials';
+import Loader from '@/components/Loader';
 
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import { parseString, stringToKey } from '@/utils/utils';
@@ -19,12 +20,13 @@ interface AuthorsProps {
 
 const Authors: FC<AuthorsProps> = ({ authors }) => {
   const ref = useRef<HTMLElement | null>(null);
-  const isIntersecting = useIntersectionObserver(ref);
+  const { isShowing, isLoading } = useIntersectionObserver(ref);
   const { t } = useTranslation(['authors', 'common']);
 
   return (
     <section ref={ref} className={styles.authors}>
-      {isIntersecting && (
+      {isLoading && <Loader />}
+      {isShowing && (
         <>
           <h2 className={sen.className}>{t('heading')}</h2>
           <div className={styles.authors__content}>

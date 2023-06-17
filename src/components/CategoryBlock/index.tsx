@@ -4,6 +4,7 @@ import React, { useRef } from 'react';
 import { useTranslation } from 'next-i18next';
 
 import Categories from './Categories';
+import Loader from '@/components/Loader';
 
 import { CATEGORY_ITEMS } from '@/constants/constants';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
@@ -13,12 +14,13 @@ import styles from './styled.module.scss';
 
 const CategoryBlock = () => {
   const ref = useRef<HTMLElement | null>(null);
-  const isIntersecting = useIntersectionObserver(ref);
+  const { isShowing, isLoading } = useIntersectionObserver(ref);
   const { t } = useTranslation('category');
 
   return (
     <section ref={ref} className={styles.categories}>
-      {isIntersecting && (
+      {isLoading && <Loader />}
+      {isShowing && (
         <>
           <h2 className={sen.className}>{t('heading')}</h2>
           <Categories type="home" categories={CATEGORY_ITEMS} />

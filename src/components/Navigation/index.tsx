@@ -2,8 +2,9 @@ import React, { FC } from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 
-import { parseString } from '@/utils/utils';
+import { isLinkActive, parseString } from '@/utils/utils';
 import { inter } from '@/styles/fonts';
 
 import styles from './styled.module.scss';
@@ -21,6 +22,7 @@ interface NavigationProps {
 const Navigation: FC<NavigationProps> = ({ links, onClick }) => {
   const { t } = useTranslation('header');
   const router = useRouter();
+  const path = usePathname();
 
   const changeTo = router.locale === 'en' ? 'ru' : 'en';
 
@@ -28,7 +30,11 @@ const Navigation: FC<NavigationProps> = ({ links, onClick }) => {
     <ul className={styles.navigation}>
       {links.map(({ href, text }) => (
         <li key={href} className={`${styles.navigation__link} ${inter.className}`}>
-          <Link href={href} onClick={onClick}>
+          <Link
+            href={href}
+            className={`${isLinkActive(path, href) ? styles.active : ''}`}
+            onClick={onClick}
+          >
             {t(parseString(text))}
           </Link>
         </li>

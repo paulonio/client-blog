@@ -95,3 +95,21 @@ export const getHeroPost = () => {
 
   return heroPost;
 };
+
+export const isLinkActive = (path: string, href: string) => {
+  if (path !== '/' && href === '/') {
+    return false;
+  }
+
+  return path.includes(href);
+};
+
+export const delayResult = (
+  setShowing: (value: boolean) => void,
+  setLoading: (value: boolean) => void
+) => {
+  new Promise((resolve) => setTimeout(resolve, 300)).then(() => {
+    setShowing(true);
+    setLoading(false);
+  });
+};

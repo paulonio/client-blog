@@ -1,17 +1,13 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { useRouter } from 'next/router';
+
+import '../__mocks__/routerMock';
+import '../__mocks__/utilsMock';
 
 import Navigation from '.';
 import type { LinkType } from '@/components/Navigation';
 
 const TEST_LINKS: LinkType[] = [{ href: '/test', text: 'test' }];
-
-jest.mock('next/router', () => ({
-  useRouter: jest.fn(),
-}));
-
-(useRouter as jest.Mock).mockReturnValue({ query: {} });
 
 describe('Navigation', () => {
   it('should render navigation', () => {

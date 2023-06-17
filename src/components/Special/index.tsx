@@ -5,19 +5,22 @@ import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 
 import Button from '../Button';
+import Loader from '@/components/Loader';
+
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import { sen } from '@/styles/fonts';
 
 import styles from './styled.module.scss';
-import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
 const Special = () => {
   const ref = useRef<HTMLElement | null>(null);
-  const isIntersecting = useIntersectionObserver(ref);
+  const { isShowing, isLoading } = useIntersectionObserver(ref);
   const { t } = useTranslation('special');
 
   return (
     <section ref={ref} className={styles.special}>
-      {isIntersecting && (
+      {isLoading && <Loader />}
+      {isShowing && (
         <>
           <div className={styles.image}>
             <img src="/assets/images/special.jpg" alt="Special" />

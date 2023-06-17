@@ -9,10 +9,9 @@ exports[`Navigation should render navigation 1`] = `
       class="navigation__link className"
     >
       <a
+        class="active"
         href="/test"
-      >
-        test
-      </a>
+      />
     </li>
     <li
       class="navigation__link className"

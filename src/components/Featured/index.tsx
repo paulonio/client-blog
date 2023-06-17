@@ -2,24 +2,27 @@
 
 import React, { useRef } from 'react';
 
-import FeaturedPost from './FeaturedPost';
-import AllPosts from './AllPosts';
+import FeaturedPost from '@/components/Featured/FeaturedPost';
+import AllPosts from '@/components/Featured/AllPosts';
+import Loader from '@/components/Loader';
 
 import { POSTS } from '@/constants/posts';
 
-import styles from './styled.module.scss';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+
+import styles from './styled.module.scss';
 
 const Featured = () => {
   const [post] = POSTS;
   const posts = POSTS.slice(0, 4);
 
   const ref = useRef<HTMLElement | null>(null);
-  const isIntersecting = useIntersectionObserver(ref);
+  const { isShowing, isLoading } = useIntersectionObserver(ref);
 
   return (
     <section ref={ref} className={styles.featured}>
-      {isIntersecting && (
+      {isLoading && <Loader />}
+      {isShowing && (
         <>
           <FeaturedPost post={post} />
           <AllPosts posts={posts} />

@@ -1,4 +1,5 @@
 import { MutableRefObject, useEffect, useRef, useState } from 'react';
+import { useDelay } from './useDelay';
 
 export const useIntersectionObserver = (ref: MutableRefObject<HTMLElement | null>) => {
   const [isIntersecting, setIntersecting] = useState<boolean>(false);
@@ -30,5 +31,5 @@ export const useIntersectionObserver = (ref: MutableRefObject<HTMLElement | null
     return () => cleanObserver();
   }, [ref.current]);
 
-  return isIntersecting;
+  return useDelay(isIntersecting);
 };

@@ -6,6 +6,7 @@ import { useTranslation } from 'next-i18next';
 import Heading from './Heading';
 import Profile from './Profile';
 import ArrowIcon from '@/icons/ArrowIcon';
+import Loader from '@/components/Loader';
 
 import { Testimonial } from '@/types/types';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
@@ -21,7 +22,7 @@ const Testimonials: FC<TestimonialsProps> = ({ testimonials }) => {
   const [index, setIndex] = useState<number>(0);
   const lastIndex = testimonials.length - 1;
   const ref = useRef<HTMLElement | null>(null);
-  const isIntersecting = useIntersectionObserver(ref);
+  const { isShowing, isLoading } = useIntersectionObserver(ref);
   const { t } = useTranslation('testimonials');
 
   const handleIncrement = () => {
@@ -38,7 +39,8 @@ const Testimonials: FC<TestimonialsProps> = ({ testimonials }) => {
 
   return (
     <section ref={ref} className={styles.testimonial}>
-      {isIntersecting && (
+      {isLoading && <Loader />}
+      {isShowing && (
         <>
           <Heading />
           <div className={styles.testimonial__wrapper}>

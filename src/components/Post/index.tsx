@@ -21,7 +21,7 @@ const Post: FC<PostProps> = ({ post }) => {
       </div>
       <div className={styles.content}>
         <h5>{t(stringToKey(category), { ns: 'common' })}</h5>
-        <h2>{t(stringToKey(title))}</h2>
+        <h2>{t(stringToKey(title), { ns: 'common' })}</h2>
         <p className="body-s">{t(stringToKey(body))}</p>
       </div>
     </div>
