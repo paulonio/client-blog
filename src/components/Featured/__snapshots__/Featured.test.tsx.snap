@@ -17,7 +17,7 @@ exports[`Featured should render all posts component 1`] = `
         href="/blog"
       >
         <button
-          class="body-s link__button"
+          class="link__button"
           type="button"
         >
           view

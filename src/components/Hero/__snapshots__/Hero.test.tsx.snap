@@ -31,12 +31,15 @@ exports[`Hero should render hero 1`] = `
           <p
             class="description"
           >
+            by
+             
             <span
               class="description__name"
             >
-              author
+              test
             </span>
-             | 
+             
+            | 
             date
           </p>
           <p

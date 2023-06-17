@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render header 1`] = `
+<div>
+  <header
+    class="header"
+  >
+    <div
+      class="container header__wrapper"
+    >
+      <h1
+        class="title"
+      >
+        title
+      </h1>
+      <div
+        class="right"
+      >
+        <nav>
+          <ul
+            class="navigation"
+          >
+            <li
+              class="navigation__link className"
+            >
+              <a
+                href="/"
+              >
+                home
+              </a>
+            </li>
+            <li
+              class="navigation__link className"
+            >
+              <a
+                href="/blog"
+              >
+                blog
+              </a>
+            </li>
+            <li
+              class="navigation__link className"
+            >
+              <a
+                href="/about"
+              >
+                about-us
+              </a>
+            </li>
+            <li
+              class="navigation__link className"
+            >
+              <a
+                href="/contact"
+              >
+                contact-us
+              </a>
+            </li>
+            <li
+              class="navigation__link className"
+            >
+              <a
+                href="/"
+              >
+                change
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="button"
+          type="button"
+        >
+          video
+        </button>
+        <div
+          aria-hidden="true"
+          class="overlay "
+        />
+        <div
+          aria-hidden="true"
+          class="wrapper "
+        >
+          <div
+            class="line"
+          />
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+`;

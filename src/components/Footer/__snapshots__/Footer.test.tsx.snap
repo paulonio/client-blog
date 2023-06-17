@@ -64,6 +64,15 @@ exports[`Footer should render footer 1`] = `
               privacy-policy
             </a>
           </li>
+          <li
+            class="navigation__link className"
+          >
+            <a
+              href="/"
+            >
+              change
+            </a>
+          </li>
         </ul>
       </div>
       <form

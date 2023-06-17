@@ -3,11 +3,11 @@ import { render } from '@testing-library/react';
 
 import '../__mocks__/routerMock';
 
-import Footer from '.';
+import Header from '.';
 
-describe('Footer', () => {
-  it('should render footer', () => {
-    const { container } = render(<Footer />);
+describe('Header', () => {
+  it('should render header', () => {
+    const { container } = render(<Header />);
 
     expect(container).toMatchSnapshot();
   });
