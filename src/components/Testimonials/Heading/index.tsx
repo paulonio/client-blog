@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next';
 
 import { sen } from '@/styles/fonts';
 
-import styles from './styled.module.scss';
+import styles from '../styled.module.scss';
 
 const Heading = () => {
   const { t } = useTranslation('testimonials');

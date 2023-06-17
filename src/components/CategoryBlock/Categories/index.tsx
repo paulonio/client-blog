@@ -6,7 +6,7 @@ import { Category } from '@/types/types';
 import { sen } from '@/styles/fonts';
 
 import { parseString, stringToKey } from '@/utils/utils';
-import styles from './styled.module.scss';
+import styles from '../styled.module.scss';
 
 interface CategoriesProps {
   categories: Category[];

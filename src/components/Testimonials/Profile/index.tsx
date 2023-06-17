@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import { useTranslation } from 'next-i18next';
 
+import { stringToKey } from '@/utils/utils';
 import type { User } from '@/types/types';
 
-import styles from './styled.module.scss';
-import { stringToKey } from '@/utils/utils';
+import styles from '../styled.module.scss';
 
 interface ProfileProps {
   profile: User;

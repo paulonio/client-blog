@@ -6,7 +6,7 @@ import Post from './Post';
 import type { PostType } from '@/types/types';
 import { sen } from '@/styles/fonts';
 
-import styles from './styled.module.scss';
+import styles from '../styled.module.scss';
 
 interface OtherPostsProps {
   posts: PostType[];

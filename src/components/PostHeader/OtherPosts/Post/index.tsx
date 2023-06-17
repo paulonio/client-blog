@@ -5,8 +5,8 @@ import { useTranslation } from 'next-i18next';
 import type { PostType } from '@/types/types';
 import { sen } from '@/styles/fonts';
 
-import styles from './styled.module.scss';
 import { stringToKey } from '@/utils/utils';
+import styles from '@/components/PostHeader/styled.module.scss';
 
 interface PostProps {
   post: PostType;

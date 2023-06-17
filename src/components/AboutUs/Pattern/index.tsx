@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './styled.module.scss';
+import styles from '../styled.module.scss';
 
 const Pattern = () => {
   return (

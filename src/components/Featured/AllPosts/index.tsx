@@ -2,12 +2,13 @@ import React, { FC } from 'react';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 
+import Button from '../../Button';
+
 import { PostType } from '@/types/types';
+import { stringToKey } from '@/utils/utils';
 import { sen } from '@/styles/fonts';
 
-import styles from './styled.module.scss';
-import Button from '../../Button';
-import { stringToKey } from '@/utils/utils';
+import styles from '../styled.module.scss';
 
 interface AllPostsProps {
   posts: PostType[];

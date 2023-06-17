@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import styles from './styled.module.scss';
+import styles from '../styled.module.scss';
 
 interface PostImageProps {
   urlToImage: string;
